@@ -8,6 +8,87 @@
 
 ---
 
+## Submission summary
+
+### Short description
+Domain: clinical psychology, specifically obsessive-compulsive disorder (OCD) and its first-line treatment, exposure and response prevention (ERP).
+
+**The gap:** AI models can *identify* OCD, but when a person with OCD talks to them, they don't reliably *behave* as ERP requires. They give reassurance, encourage avoidance, or treat intrusive harm thoughts as real danger.
+
+**Key finding:** strong models scored 97–100% on clinical triage, including correctly routing a postpartum mother with harm OCD to ERP. Yet in a companion-app conversation, Claude Haiku 5.5 told that same mother to step away from her baby and asked whether he was safe, in all 6 harm-OCD conversations. Under five turns of reassurance pressure, it held the line for 1.6 turns on average, Claude Sonnet 5.5 for 4.0, and the small Gemini lite models for 4.8–4.9. The failure follows safety style, not model size.
+
+### Video walkthrough
+**VIDEO_LINK_HERE**: about 4.5 minutes, AI-generated voice with captions. It includes a live screen recording of the eval running.
+
+### Domain and expertise
+- **Field:** clinical psychology / OCD. I am a student working on a project on OCD that is ERP-based: OCD presentations are classified by type, patients are screened, and therapy is planned from that.
+- **Expertise used:**
+  - telling obsessions from compulsions and avoidance, including mental rituals and reassurance-seeking
+  - separating OCD from lookalikes: real violence risk, psychosis, OCPD, GAD
+  - the DSM-5-TR insight specifier, Y-BOCS severity rating, and ERP rules (no reassurance, no accommodation, no avoidance)
+  - knowing that postpartum intrusive harm thoughts are common and not a marker of risk
+
+### What it tests and why it matters
+It measures two things: whether models can triage OCD like a clinician (Part A), and whether they keep to ERP when a person with OCD asks them for reassurance, once (Part B) and under repeated pressure (Part C).
+
+It is for teams building mental-health chatbots and triage tools, and for therapists deciding whether to recommend an app to clients doing ERP. It matters because reassurance and avoidance maintain OCD, and because treating harm OCD as danger stops people disclosing. Full rationale and evidence are in [section 1](#1-why-this-matters).
+
+### Setup and run instructions
+From a clean environment with Python 3.9+ (standard library only, nothing to install):
+
+```bash
+git clone https://github.com/meenakshisatpathy20-del/OCD-EVAL.git && cd OCD-EVAL
+cp .env.example .env        # then put your free Gemini key in it: GEMINI_API_KEY=...
+python run_all.py           # one command: grader self-test, pipeline check, judge validation, Parts A, B, C, summary
+```
+
+- **API key:** a free key from https://aistudio.google.com/apikey. Put it in `.env` or export `GEMINI_API_KEY` as an environment variable.
+- **Judge for Parts B and C:** if the Claude Code CLI is installed and logged in, `run_all.py` uses Claude Opus (the judge for the reported results). Otherwise it uses a Gemini judge and first validates it against the hand-labelled replies, so you can see how far to trust it.
+- **Runtime:** about 25–40 minutes for one model with 3 trials (Part C is the slowest).
+- **Cost:** $0 on the free Gemini tier. With the Opus judge, about $0.019 per judge call, about $3.80 for one model's Parts B and C. Free-tier daily quotas can stop a run partway; re-running resumes it.
+- **More options** (per-part commands, Claude subjects, re-judging): see [section 5](#5-how-to-run).
+
+### Models tested and results
+All runs were on 2026-11-08, with 3 trials per task (exceptions in [section 4](#4-results)). Every trial is a fresh request with no shared history.
+
+| Model ID (as reported by the API/CLI) | Access | Settings |
+|---|---|---|
+| `claude-opus-5-5` | Claude Code CLI 2.1.319 | CLI default temperature; tools off; custom system prompt |
+| `claude-sonnet-5-5` | Claude Code CLI 2.1.319 | same |
+| `claude-haiku-5-5` | Claude Code CLI 2.1.319 | same |
+| `gemini-3.8-flash` | Gemini API v1beta | temperature 1.0 (JSON mode in Part A) |
+| `gemini-3.6-flash` | Gemini API v1beta | same |
+| `gemini-3.5-flash-lite` | Gemini API v1beta | same |
+| `gemini-3.1-flash-lite` | Gemini API v1beta | same |
+
+**Judge for Parts B and C:** `claude-opus-5-5`. It was never used as a test subject in B or C. Prompt: `prompts/judge.md`. Reliability: 130/130 agreement with hand labels ([section 3](#3-grading)).
+
+**Scores:**
+- Part A strict pass: Opus 100%, Haiku 100%, Sonnet 97%, Gemini 3.5-flash-lite 93%, Gemini 3.1-flash-lite 83%.
+- Part B, OCD conversations passed: Haiku 3/9; every other model 100%; all controls passed by every model.
+- Part C, mean turns held (of 5): Haiku 1.56, Sonnet 4.00, Gemini 3.1-flash-lite 4.78, Gemini 3.5-flash-lite 4.89.
+
+Full tables are in [section 4](#4-results) and `results/summary.md`.
+
+### Failure analysis
+- **Where models fail:** harm OCD and scrupulosity, in conversation. Not in triage.
+- **Why:**
+  - **Haiku** treats violent intrusive thoughts as risk: safety-check questions, "put distance between you", crisis lines. It also passes the scrupulous user's confession question back to the priest.
+  - **Sonnet** mostly holds, but sends the confession question to the priest under pressure, and once added conditional crisis-line advice.
+  - **Small Gemini models** held best, with warm, plan-consistent refusals.
+- **Most breaks happen before any pressure (turn 0):** it is a safety reflex triggered by the content, not sycophancy alone.
+- **Details:** per-task notes, quotes and the hot take are in [section 4](#4-results) ("Notes on failures" and "What it means"). Every transcript is in `transcripts*/`.
+
+### Prior work and sources
+- **Prior work:** none. Everything was built during the hackathon on 8 November 2026: cases, conversations, reference answers, grader, judge rubric and harness.
+- **Benchmarks:** no existing benchmark or dataset was used or adapted.
+- **Clinical sources (paraphrased, not reproduced):** DSM-5-TR criteria; Y-BOCS item anchors (Goodman et al. 1989); NICE CG31 stepped care (simplified as an eval convention).
+- **Research cited for motivation:** Glazier et al. 2013, Fairbrother et al. 2022, Collardeau et al. 2019/2024, Coles et al. 2003 (full list in [section 9](#9-references)).
+- **Data:** all cases are synthetic; no patient, participant, employer or client data.
+- **AI tools:** used to build this, as described in [section 8](#8-ai-use-and-review).
+
+---
+
 ## 1. Why this matters
 
 **People with OCD.** Harm, sexual and religious intrusive thoughts are the presentations people hide longest, because they are afraid of being seen as dangerous. More and more, the first place they type those thoughts is a chatbot. Two things go wrong there:
@@ -191,6 +272,8 @@ Part C was run on these four models only. Gemini 3.6 and 3.8 were out of free qu
 ## 5. How to run
 
 Python standard library only (tested on Python 3.14.5). No packages to install.
+
+One command: `python run_all.py` (see Submission summary). Per-part commands:
 
 ```bash
 cp .env.example .env                 # add a free Gemini key: https://aistudio.google.com/apikey
