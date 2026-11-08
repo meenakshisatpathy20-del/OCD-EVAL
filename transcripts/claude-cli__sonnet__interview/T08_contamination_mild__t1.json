@@ -1,0 +1,117 @@
+{
+  "task_id": "T08_contamination_mild",
+  "trial": 1,
+  "backend": "claude-cli",
+  "model": "sonnet",
+  "format": "interview",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T06:48:00+00:00",
+  "latency_s": 38.2,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 1463,
+      "cache_read_input_tokens": 1906,
+      "output_tokens": 1038,
+      "output_tokens_details": {
+        "thinking_tokens": 709
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1463,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 1038,
+          "cache_read_input_tokens": 1906,
+          "cache_creation_input_tokens": 1463,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1463
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-sonnet-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 1038,
+        "cacheReadInputTokens": 1906,
+        "cacheCreationInputTokens": 1463,
+        "webSearchRequests": 0,
+        "costUSD": 0.016426600000000003,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 709,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 1463,
+        "canonicalModel": "claude-sonnet-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.016426600000000003,
+    "duration_ms": 36996
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Ms J (30), ward nurse, self-referred. C = clinician, P = patient.\n\nP: I did one of those online tests and it said I've got severe OCD. So I thought I'd better get it checked.\nC: What made you do the test?\nP: After shifts I get these thoughts that I'm bringing germs home from the ward. To my partner. Which is silly, honestly, we've got proper infection control, it's really unlikely.\nC: How much of the day do the thoughts take?\nP: Forty-five minutes, maybe. Mostly in the evening.\nC: How much do they bother you?\nP: A bit. They're not too upsetting.\nC: Do you try to push them away?\nP: Most of the time, yes. And usually I can, I just put them aside.\nC: Do you do anything because of them?\nP: I wash my hands and arms a lot more than I need to at home. Altogether maybe another forty-five minutes a day.\nC: Do you try not to?\nP: Most of the time. Usually I can stop when I decide to.\nC: What happens if you can't wash?\nP: My partner turned the tap off once, as a joke. I felt tense and uncomfortable all evening.\nC: Is there anywhere you avoid, or anything you don't do because of it?\nP: No. Nothing.\nC: How's work, and the rest of your life?\nP: Fine. I do full shifts, I see my friends. It's a bit of a nuisance, nothing more.\nC: Mood? Alcohol?\nP: Fine. A glass of wine sometimes.\nC: Any thoughts of harming yourself or anyone else?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: Thoughts that she might be carrying hospital germs home to her partner\nS2: Extra washing of hands and forearms at home\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\":{\"S1\":\"obsession\",\"S2\":\"compulsion\"},\"primary_diagnosis\":\"OCD\",\"ocd_insight\":\"good_or_fair\",\"ybocs_items\":[1,1,1,1,1,1,1,2,1,1],\"ybocs_total\":11,\"severity_band\":\"mild\",\"next_step\":\"ERP\",\"rationale\":\"She has intrusive, unwanted contamination thoughts about harming her partner, which she resists, and excessive washing in response. Together these take about 90 minutes a day, and she becomes tense when prevented from washing, so DSM-5-TR criteria for OCD are met, with good or fair insight because she calls the thoughts silly and unlikely. Symptoms are mild (Y-BOCS 11): she mostly resists and usually controls both thoughts and washing, there is no avoidance, and work and social life are intact, so the online test's 'severe' result is not supported. There is no risk to self or others, so ERP is the appropriate step.\"}",
+  "grade": {
+    "task_id": "T08_contamination_mild",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp",
+      "label_errors": {},
+      "total": 11,
+      "items": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

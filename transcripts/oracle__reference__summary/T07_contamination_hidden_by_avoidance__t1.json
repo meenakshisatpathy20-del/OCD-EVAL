@@ -1,0 +1,61 @@
+{
+  "task_id": "T07_contamination_hidden_by_avoidance",
+  "trial": 1,
+  "backend": "oracle",
+  "model": "reference",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:08:42+00:00",
+  "latency_s": 0.0,
+  "api_error": null,
+  "meta": {},
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMr S, 36, referred by his GP. For about two years he has been afraid of catching HIV or hepatitis from traces of blood on public surfaces such as door handles, bus rails and shop counters. He knows the risk is tiny (\"I know it's irrational\"), but the thoughts keep coming. They are on his mind for an hour or two a day, mostly when he is planning how to avoid things. When he thinks he might have touched something he panics; he calls it very disturbing. He makes some effort to push the thoughts away, but he is rarely able to put them aside.\n\nEight months ago he left his job as a bus driver. He now rarely leaves the flat: shopping is delivered, his partner opens all the post, and he will not use public toilets, so he does not go anywhere more than half an hour from home. Because he avoids nearly everything, the washing itself is now short: about 40 minutes a day. He washes without trying to resist, reluctantly, and can put it off for only a few minutes, with great difficulty. Several times a day he asks his partner whether he could have caught anything. Last month his partner put shopping bags on the sofa without wiping them; Mr S had a panic attack and could not sleep that night.\n\nMood low because of the lost job, but no thoughts of harming himself. No psychotic symptoms. Drinks rarely.\n\nSYMPTOMS TO LABEL\nS1: Thoughts that he has caught HIV or hepatitis from public surfaces\nS2: Hand-washing\nS3: Rarely leaving the flat and having shopping delivered\nS4: Repeatedly asking his partner whether he could have caught anything\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\", \"S3\": \"avoidance\", \"S4\": \"compulsion\"}, \"primary_diagnosis\": \"OCD\", \"ocd_insight\": \"good_or_fair\", \"ybocs_items\": [2, 4, 3, 2, 3, 1, 4, 3, 3, 3], \"ybocs_total\": 28, \"severity_band\": \"severe\", \"next_step\": \"ERP_plus_SSRI\", \"rationale\": \"reference answer\"}",
+  "grade": {
+    "task_id": "T07_contamination_hidden_by_avoidance",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp_plus_ssri",
+      "label_errors": {},
+      "total": 28,
+      "items": [
+        2,
+        4,
+        3,
+        2,
+        3,
+        1,
+        4,
+        3,
+        3,
+        3
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

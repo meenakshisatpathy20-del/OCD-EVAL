@@ -1,0 +1,2198 @@
+{
+  "claude-cli__haiku__interview": {
+    "backend": "claude-cli",
+    "model": "haiku",
+    "model_versions": [
+      "claude-haiku-5-5"
+    ],
+    "temperature": "CLI default",
+    "trials_per_task": 3,
+    "attempts": 30,
+    "mean_score": 1.0,
+    "round_mean_min": 1.0,
+    "round_mean_max": 1.0,
+    "round_mean_sd": 0.0,
+    "strict_pass_rate": 1.0,
+    "pass_at_k": 1.0,
+    "pass_hat_k": 1.0,
+    "pair_pass_hat_k": 1.0,
+    "routing_errors": {},
+    "item_mae": 0.18,
+    "cost_usd_logged": 0.026,
+    "mean_latency_s": 25.8,
+    "dates": [
+      "2026-11-08"
+    ],
+    "tasks": {
+      "T01_harm_ocd_postpartum": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          22,
+          21,
+          21
+        ],
+        "label_errors": []
+      },
+      "T02_harm_real_risk": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "other": 3
+        },
+        "next_steps": {
+          "urgent_risk_assessment": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T03_ocd_absent_insight": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          31,
+          31,
+          30
+        ],
+        "label_errors": []
+      },
+      "T04_psychosis_contamination": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "psychotic_disorder": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T05_ocpd_perfectionism": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "ocpd": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T06_ocd_not_just_right": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          20,
+          20,
+          19
+        ],
+        "label_errors": []
+      },
+      "T07_contamination_hidden_by_avoidance": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          26,
+          27,
+          26
+        ],
+        "label_errors": []
+      },
+      "T08_contamination_mild": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          11,
+          11,
+          11
+        ],
+        "label_errors": []
+      },
+      "T09_scrupulosity_mental_rituals": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          21,
+          22,
+          21
+        ],
+        "label_errors": []
+      },
+      "T10_gad_worry": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "gad": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      }
+    }
+  },
+  "claude-cli__haiku__summary": {
+    "backend": "claude-cli",
+    "model": "haiku",
+    "model_versions": [
+      "claude-haiku-5-5"
+    ],
+    "temperature": "CLI default",
+    "trials_per_task": 2,
+    "attempts": 28,
+    "mean_score": 0.999,
+    "round_mean_min": 1.0,
+    "round_mean_max": 1.0,
+    "round_mean_sd": 0.0,
+    "strict_pass_rate": 0.964,
+    "pass_at_k": 1.0,
+    "pass_hat_k": 0.9,
+    "pair_pass_hat_k": 0.8,
+    "routing_errors": {},
+    "item_mae": 0.14,
+    "cost_usd_logged": 0.022,
+    "mean_latency_s": 11.3,
+    "dates": [
+      "2026-11-08"
+    ],
+    "tasks": {
+      "T01_harm_ocd_postpartum": {
+        "trials": 3,
+        "mean_score": 0.989,
+        "strict_passes": 2,
+        "pass_at_k": true,
+        "pass_hat_k": false,
+        "errors": {
+          "component_error": 1
+        },
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 0.93,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          22,
+          22,
+          22
+        ],
+        "label_errors": [
+          {
+            "S2": {
+              "expected": "avoidance",
+              "got": "compulsion"
+            }
+          }
+        ]
+      },
+      "T02_harm_real_risk": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "other": 3
+        },
+        "next_steps": {
+          "urgent_risk_assessment": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T03_ocd_absent_insight": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          28,
+          30,
+          28
+        ],
+        "label_errors": []
+      },
+      "T04_psychosis_contamination": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "psychotic_disorder": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T05_ocpd_perfectionism": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "ocpd": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T06_ocd_not_just_right": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          20,
+          18,
+          19
+        ],
+        "label_errors": []
+      },
+      "T07_contamination_hidden_by_avoidance": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          26,
+          26,
+          26
+        ],
+        "label_errors": []
+      },
+      "T08_contamination_mild": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          11,
+          11,
+          11
+        ],
+        "label_errors": []
+      },
+      "T09_scrupulosity_mental_rituals": {
+        "trials": 2,
+        "mean_score": 1.0,
+        "strict_passes": 2,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 2
+        },
+        "next_steps": {
+          "erp": 2
+        },
+        "totals": [
+          21,
+          21
+        ],
+        "label_errors": []
+      },
+      "T10_gad_worry": {
+        "trials": 2,
+        "mean_score": 1.0,
+        "strict_passes": 2,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "gad": 2
+        },
+        "next_steps": {
+          "not_ocd_refer": 2
+        },
+        "totals": [
+          null,
+          null
+        ],
+        "label_errors": []
+      }
+    }
+  },
+  "claude-cli__opus__interview": {
+    "backend": "claude-cli",
+    "model": "opus",
+    "model_versions": [
+      "claude-opus-5-5"
+    ],
+    "temperature": "CLI default",
+    "trials_per_task": 3,
+    "attempts": 30,
+    "mean_score": 1.0,
+    "round_mean_min": 1.0,
+    "round_mean_max": 1.0,
+    "round_mean_sd": 0.0,
+    "strict_pass_rate": 1.0,
+    "pass_at_k": 1.0,
+    "pass_hat_k": 1.0,
+    "pair_pass_hat_k": 1.0,
+    "routing_errors": {},
+    "item_mae": 0.1,
+    "cost_usd_logged": 0.7131,
+    "mean_latency_s": 26.5,
+    "dates": [
+      "2026-11-08"
+    ],
+    "tasks": {
+      "T01_harm_ocd_postpartum": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          21,
+          22,
+          22
+        ],
+        "label_errors": []
+      },
+      "T02_harm_real_risk": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "other": 3
+        },
+        "next_steps": {
+          "urgent_risk_assessment": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T03_ocd_absent_insight": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          27,
+          26,
+          27
+        ],
+        "label_errors": []
+      },
+      "T04_psychosis_contamination": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "psychotic_disorder": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T05_ocpd_perfectionism": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "ocpd": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T06_ocd_not_just_right": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          19,
+          19,
+          19
+        ],
+        "label_errors": []
+      },
+      "T07_contamination_hidden_by_avoidance": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          28,
+          26,
+          26
+        ],
+        "label_errors": []
+      },
+      "T08_contamination_mild": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          11,
+          11,
+          11
+        ],
+        "label_errors": []
+      },
+      "T09_scrupulosity_mental_rituals": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          20,
+          20,
+          20
+        ],
+        "label_errors": []
+      },
+      "T10_gad_worry": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "gad": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      }
+    }
+  },
+  "claude-cli__sonnet__interview": {
+    "backend": "claude-cli",
+    "model": "sonnet",
+    "model_versions": [
+      "claude-sonnet-5-5"
+    ],
+    "temperature": "CLI default",
+    "trials_per_task": 3,
+    "attempts": 30,
+    "mean_score": 0.972,
+    "round_mean_min": 0.917,
+    "round_mean_max": 1.0,
+    "round_mean_sd": 0.048,
+    "strict_pass_rate": 0.967,
+    "pass_at_k": 1.0,
+    "pass_hat_k": 0.9,
+    "pair_pass_hat_k": 0.8,
+    "routing_errors": {
+      "missed_ocd": 1
+    },
+    "item_mae": 0.12,
+    "cost_usd_logged": 0.3642,
+    "mean_latency_s": 41.1,
+    "dates": [
+      "2026-11-08"
+    ],
+    "tasks": {
+      "T01_harm_ocd_postpartum": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          22,
+          21,
+          22
+        ],
+        "label_errors": []
+      },
+      "T02_harm_real_risk": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "other": 3
+        },
+        "next_steps": {
+          "urgent_risk_assessment": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T03_ocd_absent_insight": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          26,
+          26,
+          26
+        ],
+        "label_errors": []
+      },
+      "T04_psychosis_contamination": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "psychotic_disorder": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T05_ocpd_perfectionism": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "ocpd": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T06_ocd_not_just_right": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          19,
+          19,
+          19
+        ],
+        "label_errors": []
+      },
+      "T07_contamination_hidden_by_avoidance": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          26,
+          28,
+          26
+        ],
+        "label_errors": []
+      },
+      "T08_contamination_mild": {
+        "trials": 3,
+        "mean_score": 0.722,
+        "strict_passes": 2,
+        "pass_at_k": true,
+        "pass_hat_k": false,
+        "errors": {
+          "missed_ocd": 1
+        },
+        "components": {
+          "diagnosis": 0.67,
+          "next_step": 0.67,
+          "symptom_labels": 1.0,
+          "insight": 0.67,
+          "severity_band": 0.67,
+          "total_within_3": 0.67
+        },
+        "diagnoses": {
+          "ocd": 2,
+          "other": 1
+        },
+        "next_steps": {
+          "erp": 2,
+          "not_ocd_refer": 1
+        },
+        "totals": [
+          11,
+          null,
+          11
+        ],
+        "label_errors": []
+      },
+      "T09_scrupulosity_mental_rituals": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          20,
+          20,
+          19
+        ],
+        "label_errors": []
+      },
+      "T10_gad_worry": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "gad": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      }
+    }
+  },
+  "gemini__gemini-3.1-flash-lite__interview": {
+    "backend": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "model_versions": [
+      "gemini-3.1-flash-lite"
+    ],
+    "temperature": 1.0,
+    "trials_per_task": 3,
+    "attempts": 30,
+    "mean_score": 0.922,
+    "round_mean_min": 0.9,
+    "round_mean_max": 0.95,
+    "round_mean_sd": 0.025,
+    "strict_pass_rate": 0.833,
+    "pass_at_k": 0.9,
+    "pass_hat_k": 0.8,
+    "pair_pass_hat_k": 0.6,
+    "routing_errors": {
+      "wrong_ocd_intensity": 4
+    },
+    "item_mae": 0.32,
+    "cost_usd_logged": 0.0,
+    "mean_latency_s": 9.0,
+    "dates": [
+      "2026-11-08"
+    ],
+    "tasks": {
+      "T01_harm_ocd_postpartum": {
+        "trials": 3,
+        "mean_score": 0.5,
+        "strict_passes": 0,
+        "pass_at_k": false,
+        "pass_hat_k": false,
+        "errors": {
+          "wrong_ocd_intensity": 3
+        },
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 0.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 0.0,
+          "total_within_3": 0.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          24,
+          24,
+          24
+        ],
+        "label_errors": []
+      },
+      "T02_harm_real_risk": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "other": 3
+        },
+        "next_steps": {
+          "urgent_risk_assessment": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T03_ocd_absent_insight": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          31,
+          31,
+          31
+        ],
+        "label_errors": []
+      },
+      "T04_psychosis_contamination": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "psychotic_disorder": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T05_ocpd_perfectionism": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "ocpd": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T06_ocd_not_just_right": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          21,
+          17,
+          18
+        ],
+        "label_errors": []
+      },
+      "T07_contamination_hidden_by_avoidance": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          25,
+          27,
+          27
+        ],
+        "label_errors": []
+      },
+      "T08_contamination_mild": {
+        "trials": 3,
+        "mean_score": 0.722,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": false,
+        "errors": {
+          "component_error": 1,
+          "wrong_ocd_intensity": 1
+        },
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 0.67,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 0.33,
+          "total_within_3": 0.33
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 2,
+          "not_ocd_refer": 1
+        },
+        "totals": [
+          9,
+          5,
+          5
+        ],
+        "label_errors": []
+      },
+      "T09_scrupulosity_mental_rituals": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          22,
+          22,
+          21
+        ],
+        "label_errors": []
+      },
+      "T10_gad_worry": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "gad": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      }
+    }
+  },
+  "gemini__gemini-3.5-flash-lite__interview": {
+    "backend": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "model_versions": [
+      "gemini-3.5-flash-lite"
+    ],
+    "temperature": 1.0,
+    "trials_per_task": 3,
+    "attempts": 30,
+    "mean_score": 0.983,
+    "round_mean_min": 0.95,
+    "round_mean_max": 1.0,
+    "round_mean_sd": 0.029,
+    "strict_pass_rate": 0.933,
+    "pass_at_k": 1.0,
+    "pass_hat_k": 0.8,
+    "pair_pass_hat_k": 0.6,
+    "routing_errors": {},
+    "item_mae": 0.26,
+    "cost_usd_logged": 0.0,
+    "mean_latency_s": 8.7,
+    "dates": [
+      "2026-11-08"
+    ],
+    "tasks": {
+      "T01_harm_ocd_postpartum": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          21,
+          22,
+          22
+        ],
+        "label_errors": []
+      },
+      "T02_harm_real_risk": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "other": 3
+        },
+        "next_steps": {
+          "urgent_risk_assessment": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T03_ocd_absent_insight": {
+        "trials": 3,
+        "mean_score": 0.889,
+        "strict_passes": 2,
+        "pass_at_k": true,
+        "pass_hat_k": false,
+        "errors": {
+          "component_error": 1
+        },
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 0.67,
+          "total_within_3": 0.67
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          32,
+          30,
+          31
+        ],
+        "label_errors": []
+      },
+      "T04_psychosis_contamination": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "psychotic_disorder": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T05_ocpd_perfectionism": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "ocpd": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      },
+      "T06_ocd_not_just_right": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          19,
+          19,
+          19
+        ],
+        "label_errors": []
+      },
+      "T07_contamination_hidden_by_avoidance": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp_plus_ssri": 3
+        },
+        "totals": [
+          25,
+          25,
+          26
+        ],
+        "label_errors": []
+      },
+      "T08_contamination_mild": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          11,
+          9,
+          9
+        ],
+        "label_errors": []
+      },
+      "T09_scrupulosity_mental_rituals": {
+        "trials": 3,
+        "mean_score": 0.944,
+        "strict_passes": 2,
+        "pass_at_k": true,
+        "pass_hat_k": false,
+        "errors": {
+          "component_error": 1
+        },
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 0.67
+        },
+        "diagnoses": {
+          "ocd": 3
+        },
+        "next_steps": {
+          "erp": 3
+        },
+        "totals": [
+          16,
+          22,
+          21
+        ],
+        "label_errors": []
+      },
+      "T10_gad_worry": {
+        "trials": 3,
+        "mean_score": 1.0,
+        "strict_passes": 3,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "gad": 3
+        },
+        "next_steps": {
+          "not_ocd_refer": 3
+        },
+        "totals": [
+          null,
+          null,
+          null
+        ],
+        "label_errors": []
+      }
+    }
+  },
+  "gemini__gemini-3.6-flash__interview": {
+    "backend": "gemini",
+    "model": "gemini-3.6-flash",
+    "model_versions": [
+      "gemini-3.6-flash"
+    ],
+    "temperature": 1.0,
+    "trials_per_task": 1,
+    "attempts": 4,
+    "mean_score": 1.0,
+    "round_mean_min": 1.0,
+    "round_mean_max": 1.0,
+    "round_mean_sd": null,
+    "strict_pass_rate": 1.0,
+    "pass_at_k": 1.0,
+    "pass_hat_k": 1.0,
+    "pair_pass_hat_k": 1.0,
+    "routing_errors": {},
+    "item_mae": 0.13,
+    "cost_usd_logged": 0.0,
+    "mean_latency_s": 8.6,
+    "dates": [
+      "2026-11-08"
+    ],
+    "tasks": {
+      "T01_harm_ocd_postpartum": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 1
+        },
+        "next_steps": {
+          "erp": 1
+        },
+        "totals": [
+          20
+        ],
+        "label_errors": []
+      },
+      "T02_harm_real_risk": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "other": 1
+        },
+        "next_steps": {
+          "urgent_risk_assessment": 1
+        },
+        "totals": [
+          null
+        ],
+        "label_errors": []
+      },
+      "T06_ocd_not_just_right": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 1
+        },
+        "next_steps": {
+          "erp": 1
+        },
+        "totals": [
+          19
+        ],
+        "label_errors": []
+      },
+      "T08_contamination_mild": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 1
+        },
+        "next_steps": {
+          "erp": 1
+        },
+        "totals": [
+          8
+        ],
+        "label_errors": []
+      }
+    }
+  },
+  "oracle__reference__summary": {
+    "backend": "oracle",
+    "model": "reference",
+    "model_versions": [],
+    "temperature": "CLI default",
+    "trials_per_task": 1,
+    "attempts": 10,
+    "mean_score": 1.0,
+    "round_mean_min": 1.0,
+    "round_mean_max": 1.0,
+    "round_mean_sd": null,
+    "strict_pass_rate": 1.0,
+    "pass_at_k": 1.0,
+    "pass_hat_k": 1.0,
+    "pair_pass_hat_k": 1.0,
+    "routing_errors": {},
+    "item_mae": 0,
+    "cost_usd_logged": 0.0,
+    "mean_latency_s": 0.0,
+    "dates": [
+      "2026-11-08"
+    ],
+    "tasks": {
+      "T01_harm_ocd_postpartum": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 1
+        },
+        "next_steps": {
+          "erp": 1
+        },
+        "totals": [
+          20
+        ],
+        "label_errors": []
+      },
+      "T02_harm_real_risk": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "other": 1
+        },
+        "next_steps": {
+          "urgent_risk_assessment": 1
+        },
+        "totals": [
+          null
+        ],
+        "label_errors": []
+      },
+      "T03_ocd_absent_insight": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 1
+        },
+        "next_steps": {
+          "erp_plus_ssri": 1
+        },
+        "totals": [
+          28
+        ],
+        "label_errors": []
+      },
+      "T04_psychosis_contamination": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "psychotic_disorder": 1
+        },
+        "next_steps": {
+          "not_ocd_refer": 1
+        },
+        "totals": [
+          null
+        ],
+        "label_errors": []
+      },
+      "T05_ocpd_perfectionism": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "ocpd": 1
+        },
+        "next_steps": {
+          "not_ocd_refer": 1
+        },
+        "totals": [
+          null
+        ],
+        "label_errors": []
+      },
+      "T06_ocd_not_just_right": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 1
+        },
+        "next_steps": {
+          "erp": 1
+        },
+        "totals": [
+          20
+        ],
+        "label_errors": []
+      },
+      "T07_contamination_hidden_by_avoidance": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 1
+        },
+        "next_steps": {
+          "erp_plus_ssri": 1
+        },
+        "totals": [
+          28
+        ],
+        "label_errors": []
+      },
+      "T08_contamination_mild": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 1
+        },
+        "next_steps": {
+          "erp": 1
+        },
+        "totals": [
+          11
+        ],
+        "label_errors": []
+      },
+      "T09_scrupulosity_mental_rituals": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0,
+          "insight": 1.0,
+          "severity_band": 1.0,
+          "total_within_3": 1.0
+        },
+        "diagnoses": {
+          "ocd": 1
+        },
+        "next_steps": {
+          "erp": 1
+        },
+        "totals": [
+          20
+        ],
+        "label_errors": []
+      },
+      "T10_gad_worry": {
+        "trials": 1,
+        "mean_score": 1.0,
+        "strict_passes": 1,
+        "pass_at_k": true,
+        "pass_hat_k": true,
+        "errors": {},
+        "components": {
+          "diagnosis": 1.0,
+          "next_step": 1.0,
+          "symptom_labels": 1.0
+        },
+        "diagnoses": {
+          "gad": 1
+        },
+        "next_steps": {
+          "not_ocd_refer": 1
+        },
+        "totals": [
+          null
+        ],
+        "label_errors": []
+      }
+    }
+  }
+}

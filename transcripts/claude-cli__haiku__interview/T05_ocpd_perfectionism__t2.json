@@ -1,0 +1,88 @@
+{
+  "task_id": "T05_ocpd_perfectionism",
+  "trial": 2,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "format": "interview",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T06:42:30+00:00",
+  "latency_s": 12.1,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 637,
+      "cache_read_input_tokens": 2844,
+      "output_tokens": 1061,
+      "output_tokens_details": {
+        "thinking_tokens": 766
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 637,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 1061,
+          "cache_read_input_tokens": 2844,
+          "cache_creation_input_tokens": 637,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 637
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 1061,
+        "cacheReadInputTokens": 2844,
+        "cacheCreationInputTokens": 637,
+        "webSearchRequests": 0,
+        "costUSD": 0.00068654,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 766,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 637,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.00068654,
+    "duration_ms": 10669
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mr G (52), engineering manager. Wife present. C = clinician, P = patient, W = wife.\n\nW: He's so OCD about everything. Always has been.\nP: [laughs] I suppose I've got a bit of OCD. Is that what this is?\nC: Tell me what happens.\nW: He redoes his team's reports. Himself. Late at night. They've missed two deadlines this year because he wouldn't sign them off until every heading was right.\nP: They were sloppy. If I don't do it properly, nobody will.\nC: If you let a report go out the way it was, what would happen?\nP: Nothing would happen. It'd just be a worse report with my name on it. I'd be annoyed.\nC: Do you feel anxious, like you have to fix it?\nP: No. I like it done properly. It's satisfying, when it's right.\nW: Weekends are planned on lists. Times for everything. If the kids change the plan, he's in a mood all day.\nC: Anything else at home?\nW: The garage. Thirty years of manuals, broken kettles, a toaster from 1998.\nP: They might be useful. And we're not throwing money around. There's no need.\nW: We're comfortable. There's no need for him to be like that.\nC: Do you ever get thoughts that pop into your head that you don't want, that feel wrong or upsetting?\nP: Not really. I think about work a lot, but that's the job.\nC: Is there anything you do over and over to stop something bad happening, or to feel less anxious?\nP: No. I'm not a worrier. The only stress I've got is arguments, with her and with my lot at work, about how things should be done.\nC: Mood? Sleep? Alcohol?\nP: Fine. Fine. Couple of beers on a Friday.\nC: Any thoughts of harming yourself or anyone else?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: Redoing his staff's reports himself until they meet his standards\nS2: Planning weekends with detailed lists and schedules\nS3: Keeping old manuals and broken appliances that might be useful\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"other\", \"S2\": \"other\", \"S3\": \"other\"}, \"primary_diagnosis\": \"OCPD\", \"ocd_insight\": null, \"ybocs_items\": null, \"ybocs_total\": null, \"severity_band\": null, \"next_step\": \"not_OCD_refer\", \"rationale\": \"Mr G reports no intrusive, unwanted thoughts and no anxiety-driven rituals; his perfectionism, rigid lists, reluctance to delegate, and saving of items are experienced as satisfying and aligned with his values, and they have caused missed deadlines and strain at work and home. This pattern fits ego-syntonic perfectionism and preoccupation with orderliness and control, which points to OCPD rather than OCD, and he denies any risk of harm to self or others. Referral for assessment and treatment of his personality-related problem is therefore indicated.\"}",
+  "grade": {
+    "task_id": "T05_ocpd_perfectionism",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocpd",
+      "next_step": "not_ocd_refer",
+      "label_errors": {}
+    }
+  }
+}

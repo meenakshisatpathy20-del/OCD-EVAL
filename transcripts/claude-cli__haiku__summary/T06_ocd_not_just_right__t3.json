@@ -1,0 +1,116 @@
+{
+  "task_id": "T06_ocd_not_just_right",
+  "trial": 3,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:11:10+00:00",
+  "latency_s": 12.2,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 636,
+      "cache_read_input_tokens": 2634,
+      "output_tokens": 1429,
+      "output_tokens_details": {
+        "thinking_tokens": 1132
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 636,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 1429,
+          "cache_read_input_tokens": 2634,
+          "cache_creation_input_tokens": 636,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 636
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 1429,
+        "cacheReadInputTokens": 2634,
+        "cacheCreationInputTokens": 636,
+        "webSearchRequests": 0,
+        "costUSD": 0.0008682399999999999,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 1132,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 636,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.0008682399999999999,
+    "duration_ms": 11084
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMs L, 19, first-year university student, self-referred. Since about age 14 she has had a feeling that what she writes is \"not right\" or incomplete. It isn't about mistakes; she knows the notes are accurate. It is a nagging sense of wrongness that stays until things \"feel right\". She says: \"I know it's ridiculous. It makes no sense and I hate it.\" The feeling is around for about two hours a day in total. She tries to ignore it most of the time; sometimes she can shrug it off and sometimes she can't. It is upsetting, but she copes.\n\nShe rewrites pages of notes and rereads sentences again and again until they feel right, about two to two and a half hours a day. She tries not to rewrite most of the time, and about half the time she manages to leave a page as it is. When her flatmate interrupted her in the middle of rewriting, she felt uneasy and irritable for a while. She is now failing two modules because coursework is handed in late or not at all, and she has stopped going out with friends in the evenings to keep up.\n\nShe wishes she could \"just be normal about it\". She is not perfectionistic about other areas of her life: her room is messy and she is relaxed about plans. Mood mildly low because of the course. No substance use. No thoughts of harming herself or anyone else.\n\nSYMPTOMS TO LABEL\nS1: A feeling that her notes are 'not right' or incomplete\nS2: Rewriting pages of notes until they feel right\nS3: Rereading sentences again and again\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\", \"S3\": \"compulsion\"}, \"primary_diagnosis\": \"OCD\", \"ocd_insight\": \"good_or_fair\", \"ybocs_items\": [2, 2, 2, 1, 2, 2, 3, 2, 1, 2], \"ybocs_total\": 19, \"severity_band\": \"moderate\", \"next_step\": \"ERP\", \"rationale\": \"The nagging sense that her notes are 'not right' is an intrusive, unwanted obsession she tries to ignore, and rewriting and rereading until things 'feel right' are compulsions aimed at relieving it. She recognizes the belief as irrational ('I know it's ridiculous'), giving good or fair insight, and her Y-BOCS total of 19 (moderate) includes the substantial impairment from failing modules and withdrawing from friends.\"}",
+  "grade": {
+    "task_id": "T06_ocd_not_just_right",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp",
+      "label_errors": {},
+      "total": 19,
+      "items": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "item_abs_err": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

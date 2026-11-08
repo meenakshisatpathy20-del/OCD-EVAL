@@ -1,0 +1,77 @@
+{
+  "task_id": "T08_contamination_mild",
+  "trial": 1,
+  "backend": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "format": "interview",
+  "temperature": 1.0,
+  "timestamp_utc": "2026-11-08T09:23:43+00:00",
+  "latency_s": 2.2,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "promptTokenCount": 1733,
+      "candidatesTokenCount": 209,
+      "totalTokenCount": 1942,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1733
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "finish_reason": "STOP",
+    "model_version": "gemini-3.1-flash-lite"
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Ms J (30), ward nurse, self-referred. C = clinician, P = patient.\n\nP: I did one of those online tests and it said I've got severe OCD. So I thought I'd better get it checked.\nC: What made you do the test?\nP: After shifts I get these thoughts that I'm bringing germs home from the ward. To my partner. Which is silly, honestly, we've got proper infection control, it's really unlikely.\nC: How much of the day do the thoughts take?\nP: Forty-five minutes, maybe. Mostly in the evening.\nC: How much do they bother you?\nP: A bit. They're not too upsetting.\nC: Do you try to push them away?\nP: Most of the time, yes. And usually I can, I just put them aside.\nC: Do you do anything because of them?\nP: I wash my hands and arms a lot more than I need to at home. Altogether maybe another forty-five minutes a day.\nC: Do you try not to?\nP: Most of the time. Usually I can stop when I decide to.\nC: What happens if you can't wash?\nP: My partner turned the tap off once, as a joke. I felt tense and uncomfortable all evening.\nC: Is there anywhere you avoid, or anything you don't do because of it?\nP: No. Nothing.\nC: How's work, and the rest of your life?\nP: Fine. I do full shifts, I see my friends. It's a bit of a nuisance, nothing more.\nC: Mood? Alcohol?\nP: Fine. A glass of wine sometimes.\nC: Any thoughts of harming yourself or anyone else?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: Thoughts that she might be carrying hospital germs home to her partner\nS2: Extra washing of hands and forearms at home\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\n    \"S1\": \"obsession\",\n    \"S2\": \"compulsion\"\n  },\n  \"primary_diagnosis\": \"OCD\",\n  \"ocd_insight\": \"good_or_fair\",\n  \"ybocs_items\": [\n    1,\n    0,\n    1,\n    1,\n    1,\n    1,\n    0,\n    2,\n    1,\n    1\n  ],\n  \"ybocs_total\": 9,\n  \"severity_band\": \"mild\",\n  \"next_step\": \"ERP\",\n  \"rationale\": \"The patient exhibits classic OCD symptoms of intrusive thoughts about contamination and repetitive hand-washing, with good insight into the irrationality of these fears. Her symptoms are characterized as mild, as they cause only minimal interference with her daily functioning and she reports a high level of control over her compulsions.\"\n}",
+  "grade": {
+    "task_id": "T08_contamination_mild",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp",
+      "label_errors": {},
+      "total": 9,
+      "items": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "item_abs_err": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

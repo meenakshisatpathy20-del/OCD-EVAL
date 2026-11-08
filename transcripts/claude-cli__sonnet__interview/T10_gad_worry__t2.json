@@ -1,0 +1,88 @@
+{
+  "task_id": "T10_gad_worry",
+  "trial": 2,
+  "backend": "claude-cli",
+  "model": "sonnet",
+  "format": "interview",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T06:49:25+00:00",
+  "latency_s": 11.7,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 620,
+      "cache_read_input_tokens": 2754,
+      "output_tokens": 312,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 620,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 312,
+          "cache_read_input_tokens": 2754,
+          "cache_creation_input_tokens": 620,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 620
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-sonnet-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 312,
+        "cacheReadInputTokens": 2754,
+        "cacheCreationInputTokens": 620,
+        "webSearchRequests": 0,
+        "costUSD": 0.0058794,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 620,
+        "canonicalModel": "claude-sonnet-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.0058794,
+    "duration_ms": 10206
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mrs K (45), school administrator, referred by GP. C = clinician, P = patient.\n\nP: I think I might have OCD. My thoughts are obsessive. They go round and round and I can't switch them off.\nC: What are the thoughts about?\nP: Everything. The mortgage, whether we can pay it. My son's exams. My mum's heart. Whether my job's safe, there's talk of cuts. Being late. One finishes and the next one starts.\nC: How long has it been like this?\nP: Two and a half years. Most days.\nC: How do you see the thoughts? Do they make sense to you?\nP: They're real things. Bills are real. But I worry far too much about them, I know that.\nC: Do you ever get thoughts or pictures that feel strange to you, or wrong, or against who you are?\nP: No. It's just the worrying.\nC: Is there anything you do to stop the worry, or to stop something bad happening? Anything repeated, out loud or in your head?\nP: Not really. I look at the bank app maybe a couple of times a day, just to know where we are. That's normal, isn't it?\nC: How's your body?\nP: My neck and shoulders are like concrete. I don't sleep well. I'm snappy. Tired all the time.\nC: Is there anywhere you avoid?\nP: No.\nC: Work, home?\nP: I keep going. I look after everyone. I'm just always on edge.\nC: Any panic attacks? Alcohol?\nP: No. A glass of wine at the weekend.\nC: Any thoughts of harming yourself or anyone else?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: Worrying about money and whether her job is secure\nS2: Worrying about her son's exams and her mother's health\nS3: Muscle tension and poor sleep\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\":{\"S1\":\"other\",\"S2\":\"other\",\"S3\":\"other\"},\"primary_diagnosis\":\"GAD\",\"ocd_insight\":null,\"ybocs_items\":null,\"ybocs_total\":null,\"severity_band\":null,\"next_step\":\"not_OCD_refer\",\"rationale\":\"The patient describes excessive, hard-to-control worry about multiple real-life domains (finances, job security, son's exams, mother's health, punctuality) on most days for over two years, with muscle tension, poor sleep, irritability and fatigue, which fits DSM-5-TR GAD. There are no intrusive unwanted obsessions, no neutralizing compulsions (checking the bank app twice a day is minor and not driven by distress-reduction rules), and no avoidance, so OCD criteria are not met. She denies thoughts of harming herself or others, so there is no current risk and referral for GAD assessment and treatment is appropriate.\"}",
+  "grade": {
+    "task_id": "T10_gad_worry",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "gad",
+      "next_step": "not_ocd_refer",
+      "label_errors": {}
+    }
+  }
+}

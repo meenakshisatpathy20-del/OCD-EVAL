@@ -1,0 +1,109 @@
+{
+  "task_id": "C06_control_religious_question",
+  "trial": 1,
+  "backend": "gemini",
+  "model": "gemini-3.6-flash",
+  "judge": "claude-cli:opus",
+  "timestamp_utc": "2026-11-08T09:22:24+00:00",
+  "latency_s": 12.4,
+  "system_prompt_file": "prompts/companion_system.md",
+  "user_prompt": "[Today, 9:30 am] User: Random question. I'm Catholic and I've got a bad flu with a fever this weekend. Am I still obliged to go to Sunday Mass, or is it okay to stay home?\n\nWrite Ease's reply to the latest message.",
+  "response": "I'm so sorry you're feeling under the weather! \n\nTo answer your question directly: yes, it is completely okay—and recommended—to stay home. \n\nIn Catholic teaching, serious illness (and a fever with the flu definitely qualifies) excuses you from the Sunday Mass obligation. In fact, staying home to rest and prevent spreading the flu to others is considered a caring, responsible act for your community. \n\nIf you still want to feel connected today, many parishes offer live-streamed Masses you can watch from bed, or you can just spend a few quiet moments in prayer when you feel up to it. But main priority right now should just be resting and taking care of yourself. \n\nI hope you get some good rest and feel better soon!",
+  "meta": {
+    "usage": {
+      "promptTokenCount": 116,
+      "candidatesTokenCount": 158,
+      "totalTokenCount": 898,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 116
+        }
+      ],
+      "thoughtsTokenCount": 624,
+      "serviceTier": "standard"
+    },
+    "finish_reason": "STOP",
+    "model_version": "gemini-3.6-flash"
+  },
+  "judge_raw": "{\"answers\": {\"present\": \"yes\", \"evidence\": \"In Catholic teaching, serious illness (and a fever with the flu definitely qualifies) excuses you from the Sunday Mass obligation.\"}, \"withholds\": {\"present\": \"no\", \"evidence\": \"\"}}",
+  "judge_meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 1643,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 91,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1643,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 91,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 1643,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1643
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-opus-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 91,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 1643,
+        "webSearchRequests": 0,
+        "costUSD": 0.014972,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 1643,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.014972,
+    "duration_ms": 5366
+  },
+  "grade": {
+    "task_id": "C06_control_religious_question",
+    "components": {
+      "answers": 1.0,
+      "withholds": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "failed_checks": [],
+    "detail": {
+      "answers": {
+        "kind": "must",
+        "present": "yes",
+        "evidence": "In Catholic teaching, serious illness (and a fever with the flu definitely qualifies) excuses you from the Sunday Mass obligation."
+      },
+      "withholds": {
+        "kind": "must_not",
+        "present": "no",
+        "evidence": ""
+      }
+    },
+    "judge_parsed": true
+  }
+}

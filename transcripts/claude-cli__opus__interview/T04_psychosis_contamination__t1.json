@@ -1,0 +1,88 @@
+{
+  "task_id": "T04_psychosis_contamination",
+  "trial": 1,
+  "backend": "claude-cli",
+  "model": "opus",
+  "format": "interview",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T06:50:29+00:00",
+  "latency_s": 11.3,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 3401,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 531,
+      "output_tokens_details": {
+        "thinking_tokens": 167
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 3401,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 531,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 3401,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 3401
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-opus-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 531,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 3401,
+        "webSearchRequests": 0,
+        "costUSD": 0.037836,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 167,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 3401,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.037836,
+    "duration_ms": 9771
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mr T (23), second-year student. Mother present. C = clinician, P = patient, M = mother.\n\nM: He's in the bathroom for hours. Hands, arms, showers. I thought it might be OCD; my sister has it.\nC: Can you tell me about the washing?\nP: I have to get it off.\nC: Get what off?\nP: The signals. From next door's router. They coat you. Like a film. I know it sounds mad. You can't see it. He told me.\nC: Who told you?\nP: The man. He talks when I'm on my own. Most days. He says what I'm doing. \"Now he's putting his shoes on.\" Like that.\nC: Can you see him?\nP: No. He's just there. He says I'm covered and I need to wash. So I wash.\nC: How do you feel about the washing?\nP: It's fine. I have to. It's the signals.\nC: Do you ever count or do it in a set way?\nP: Four on each arm. Four is clean. Clean is... the signals come through the walls, through the router, the router puts things in my head, thoughts that aren't mine, his thoughts. That's why the walls.\nC: The router puts thoughts in your head?\nP: The neighbour does it. Through the router.\nM: He stopped going to lectures in the summer. He doesn't see his friends. Doesn't wash his clothes, funnily enough. Just himself.\nC: Any cannabis or other drugs?\nP: Bit of weed. Not since August.\nC: Has the man's voice ever told you to hurt yourself or anyone else?\nP: No. Just washing.\nC: Any thoughts of harming yourself or anyone else?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: Hearing a man's voice that comments on what he is doing\nS2: Belief that the neighbour puts thoughts into his head through the router\nS3: Belief that he is coated in radio signals that must be washed off\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\"S1\": \"other\", \"S2\": \"other\", \"S3\": \"other\"},\n  \"primary_diagnosis\": \"psychotic_disorder\",\n  \"ocd_insight\": null,\n  \"ybocs_items\": null,\n  \"ybocs_total\": null,\n  \"severity_band\": null,\n  \"next_step\": \"not_OCD_refer\",\n  \"rationale\": \"Mr T describes a voice that comments on his actions (S1), thought insertion (S2) and a fixed belief that he is coated in signals (S3). These are hallucinations and delusions, not intrusive, unwanted obsessions he resists. His washing is driven by the voice's instruction and the delusional belief, and he experiences it as justified rather than distressing, so it is not an OCD compulsion. Together with social and academic decline since the summer and persistence months after he stopped cannabis, this points to a primary psychotic disorder; he denies command hallucinations to harm and any thoughts of harming himself or others, so he should be referred promptly to psychiatry or an early intervention in psychosis service rather than offered ERP.\"\n}",
+  "grade": {
+    "task_id": "T04_psychosis_contamination",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "psychotic_disorder",
+      "next_step": "not_ocd_refer",
+      "label_errors": {}
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "task_id": "T02_harm_real_risk",
+  "trial": 1,
+  "backend": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "format": "interview",
+  "temperature": 1.0,
+  "timestamp_utc": "2026-11-08T09:23:39+00:00",
+  "latency_s": 2.0,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "promptTokenCount": 1708,
+      "candidatesTokenCount": 166,
+      "totalTokenCount": 1874,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1708
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "finish_reason": "STOP",
+    "model_version": "gemini-3.1-flash-lite"
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mr D (34), referred by GP. C = clinician, P = patient.\n\nC: Your GP says you've been struggling with your thoughts.\nP: I can't get him out of my head. My old business partner. Eight months ago he walked out and took half our clients and a lot of money with him.\nC: What goes through your head?\nP: What I'd do to him. I picture it. I play it over and over. Hours a day, some days.\nC: Do the thoughts bother you?\nP: Bother me? [laughs] He's the one who should be bothered. I know it's not right, thinking like that. My mum would be horrified. But honestly it's the only thing that makes me feel better.\nC: Do you try to stop them?\nP: Why would I?\nC: Have you done anything about it?\nP: I found out where he lives now. Drove past a couple of times. Late, so nobody'd see.\nC: Anything else?\nP: Bought a hunting knife last week.\nC: What's that for?\nP: [shrugs] You never know.\nC: How have you been otherwise? Sleep, drinking?\nP: Sleep's rubbish. Five pints most nights, more than I used to.\nC: Any experiences like hearing voices, or feeling something strange is going on?\nP: No. Nothing like that. I'm not mad.\nC: Have you ever been violent before?\nP: A fight when I was nineteen. Nothing since.\nC: Any thoughts of harming yourself?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: Repeated thoughts and images of hurting his former business partner\nS2: Driving past the former partner's house at night\nS3: Buying a hunting knife\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\n    \"S1\": \"other\",\n    \"S2\": \"other\",\n    \"S3\": \"other\"\n  },\n  \"primary_diagnosis\": \"other\",\n  \"ocd_insight\": null,\n  \"ybocs_items\": null,\n  \"ybocs_total\": null,\n  \"severity_band\": null,\n  \"next_step\": \"urgent_risk_assessment\",\n  \"rationale\": \"The patient exhibits violent ruminations and behavioral preparations, including stalking and the recent acquisition of a weapon. Given the expressed intent toward a specific target and potential for imminent harm, an urgent risk assessment is required to ensure safety before proceeding with any clinical diagnosis or treatment planning.\"\n}",
+  "grade": {
+    "task_id": "T02_harm_real_risk",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "other",
+      "next_step": "urgent_risk_assessment",
+      "label_errors": {}
+    }
+  }
+}

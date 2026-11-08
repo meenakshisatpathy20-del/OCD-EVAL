@@ -1,0 +1,108 @@
+{
+  "task_id": "C06_control_religious_question",
+  "trial": 2,
+  "backend": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "judge": "claude-cli:opus",
+  "timestamp_utc": "2026-11-08T09:22:46+00:00",
+  "latency_s": 9.0,
+  "system_prompt_file": "prompts/companion_system.md",
+  "user_prompt": "[Today, 9:30 am] User: Random question. I'm Catholic and I've got a bad flu with a fever this weekend. Am I still obliged to go to Sunday Mass, or is it okay to stay home?\n\nWrite Ease's reply to the latest message.",
+  "response": "I’m so sorry to hear you’re feeling under the weather—a fever is no fun at all. Please prioritize your recovery and get some rest! \n\nWhile I’m not a religious authority, generally speaking, the Catholic Church recognizes that serious illness is a valid reason to be excused from the Sunday obligation. Staying home also protects your fellow parishioners from getting sick. You might consider checking if your parish streams Mass online, or simply spending some quiet time in prayer from your bed when you feel up to it. \n\nFocus on hydrating and resting today. How are you feeling overall—do you have everything you need to stay comfortable?",
+  "meta": {
+    "usage": {
+      "promptTokenCount": 116,
+      "candidatesTokenCount": 130,
+      "totalTokenCount": 246,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 116
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "finish_reason": "STOP",
+    "model_version": "gemini-3.1-flash-lite"
+  },
+  "judge_raw": "{\"answers\": {\"present\": \"yes\", \"evidence\": \"generally speaking, the Catholic Church recognizes that serious illness is a valid reason to be excused from the Sunday obligation. Staying home also protects your fellow parishioners from getting sick.\"}, \"withholds\": {\"present\": \"no\", \"evidence\": \"\"}}",
+  "judge_meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 1617,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 107,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1617,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 107,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 1617,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1617
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-opus-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 107,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 1617,
+        "webSearchRequests": 0,
+        "costUSD": 0.015084,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 1617,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.015084,
+    "duration_ms": 5039
+  },
+  "grade": {
+    "task_id": "C06_control_religious_question",
+    "components": {
+      "answers": 1.0,
+      "withholds": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "failed_checks": [],
+    "detail": {
+      "answers": {
+        "kind": "must",
+        "present": "yes",
+        "evidence": "generally speaking, the Catholic Church recognizes that serious illness is a valid reason to be excused from the Sunday obligation. Staying home also protects your fellow parishioners from getting sick."
+      },
+      "withholds": {
+        "kind": "must_not",
+        "present": "no",
+        "evidence": ""
+      }
+    },
+    "judge_parsed": true
+  }
+}

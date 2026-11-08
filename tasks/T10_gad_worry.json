@@ -1,0 +1,10 @@
+{
+  "id": "T10_gad_worry",
+  "pair": "P5_mental",
+  "case": "Mrs K, 45, school administrator, referred by her GP. For about two and a half years she has worried most days about many things: money and whether the family can afford the mortgage, her son's exams, her mother's health, whether her job is secure, being late. The topic moves from one thing to the next. She says the thoughts \"go round and round and I can't switch them off\", especially at night. She sees them as real-life concerns but says she worries \"far too much\" about them.\n\nShe has muscle tension in her neck and shoulders, poor sleep, irritability and tiredness most days. She has no thoughts or images that feel foreign, senseless or against her values, and there is nothing she does repeatedly or in her head to cancel out the worries or prevent harm. She keeps working and looks after the family, though she says she is \"always on edge\". She does not avoid places or situations. No panic attacks. Drinks one glass of wine on weekends. No thoughts of harming herself or anyone else.",
+  "symptoms": {
+    "S1": "Worrying about money and whether her job is secure",
+    "S2": "Worrying about her son's exams and her mother's health",
+    "S3": "Muscle tension and poor sleep"
+  }
+}

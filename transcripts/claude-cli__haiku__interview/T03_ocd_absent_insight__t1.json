@@ -1,0 +1,117 @@
+{
+  "task_id": "T03_ocd_absent_insight",
+  "trial": 1,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "format": "interview",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T06:04:30+00:00",
+  "latency_s": 14.9,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 1746,
+      "cache_read_input_tokens": 1906,
+      "output_tokens": 1506,
+      "output_tokens_details": {
+        "thinking_tokens": 1223
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1746,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 1506,
+          "cache_read_input_tokens": 1906,
+          "cache_creation_input_tokens": 1746,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1746
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 1506,
+        "cacheReadInputTokens": 1906,
+        "cacheCreationInputTokens": 1746,
+        "webSearchRequests": 0,
+        "costUSD": 0.00112146,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 1223,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 1746,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.00112146,
+    "duration_ms": 11867
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mrs M (41), bookkeeper. Husband present. C = clinician, P = patient, H = husband.\n\nH: She's been like this for years. I think she's getting paranoid.\nP: I'm not paranoid. I know what I know.\nC: Can you tell me what you know?\nP: The man next door sprays his garden. Pesticide. It drifts. It gets on my hands, on my clothes, and if it gets on the children it will poison them. It isn't a fear. It's a fact.\nC: Is there any chance it isn't true?\nP: No. He [husband] printed things off the internet, the doctor showed me leaflets. They don't understand it.\nC: Does your neighbour mean to harm you?\nP: Him? No, he's a nice old man. He just doesn't know what that stuff does.\nC: How much of the day are you thinking about it?\nP: Five, six hours? I hate it. I wish it would just stop. It pushes in.\nC: Can you put it aside?\nP: Rarely. It's just there.\nC: How upsetting is it?\nP: Frightening. But I can live with it, as long as I can wash.\nC: Tell me about the washing.\nP: Hands, about sixty times a day, a couple of minutes each time. Showers, four a day, twenty minutes. And anything that's been outside gets washed on its own, hot. That's maybe forty minutes a day, all the sorting and loading.\nC: Do you ever try not to wash?\nP: Why would I fight protecting my children?\nH: I asked her once to wait ten minutes. She lasted a minute, two minutes, and she was shaking.\nC: What happened when the water was off?\nP: That afternoon? I was tense. Snappy with everyone. But I coped.\nC: Anything else you do?\nP: The kids don't play on that side of the house. The side facing his garden.\nC: How's work?\nP: Three years ago I was off for six months, it was bad then. Now I'm full time. I'm late most days, but I'm there.\nH: Home's strained. But we're getting by.\nC: Have you ever heard voices or seen things others don't? Felt people were against you, or that your thoughts weren't your own?\nP: No. Nothing like that.\nC: Any thoughts of harming yourself or anyone else?\nP: No. I'm trying to protect them.\n\nSYMPTOMS TO LABEL\nS1: The belief that pesticide traces on her hands and clothes will poison her children\nS2: Washing her hands about 60 times a day and showering four times a day\nS3: Keeping the children away from the side of the house facing the neighbour's garden\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\", \"S3\": \"avoidance\"}, \"primary_diagnosis\": \"OCD\", \"ocd_insight\": \"absent_delusional\", \"ybocs_items\": [3, 3, 3, 3, 3, 3, 3, 3, 4, 3], \"ybocs_total\": 31, \"severity_band\": \"severe\", \"next_step\": \"ERP_plus_SSRI\", \"rationale\": \"Recurrent intrusive fears of pesticide poisoning, with washing and showering rituals taking roughly four hours a day, and avoidance of the garden-facing side of the house, cause substantial interference with work and home life. The patient is completely convinced the fear is factual and shows little ability to resist or stop the rituals, and the Y-BOCS total of 31 falls in the severe range.\"}",
+  "grade": {
+    "task_id": "T03_ocd_absent_insight",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp_plus_ssri",
+      "label_errors": {},
+      "total": 31,
+      "items": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        3
+      ],
+      "item_abs_err": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "T06_ocd_not_just_right",
+  "pair": "P3_perfectionism",
+  "case": "Ms L, 19, first-year university student, self-referred. Since about age 14 she has had a feeling that what she writes is \"not right\" or incomplete. It isn't about mistakes; she knows the notes are accurate. It is a nagging sense of wrongness that stays until things \"feel right\". She says: \"I know it's ridiculous. It makes no sense and I hate it.\" The feeling is around for about two hours a day in total. She tries to ignore it most of the time; sometimes she can shrug it off and sometimes she can't. It is upsetting, but she copes.\n\nShe rewrites pages of notes and rereads sentences again and again until they feel right, about two to two and a half hours a day. She tries not to rewrite most of the time, and about half the time she manages to leave a page as it is. When her flatmate interrupted her in the middle of rewriting, she felt uneasy and irritable for a while. She is now failing two modules because coursework is handed in late or not at all, and she has stopped going out with friends in the evenings to keep up.\n\nShe wishes she could \"just be normal about it\". She is not perfectionistic about other areas of her life: her room is messy and she is relaxed about plans. Mood mildly low because of the course. No substance use. No thoughts of harming herself or anyone else.",
+  "symptoms": {
+    "S1": "A feeling that her notes are 'not right' or incomplete",
+    "S2": "Rewriting pages of notes until they feel right",
+    "S3": "Rereading sentences again and again"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "task_id": "T02_harm_real_risk",
+  "trial": 2,
+  "backend": "claude-cli",
+  "model": "opus",
+  "format": "interview",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T06:51:13+00:00",
+  "latency_s": 13.8,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 615,
+      "cache_read_input_tokens": 2704,
+      "output_tokens": 408,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 615,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 408,
+          "cache_read_input_tokens": 2704,
+          "cache_creation_input_tokens": 615,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 615
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-opus-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 408,
+        "cacheReadInputTokens": 2704,
+        "cacheCreationInputTokens": 615,
+        "webSearchRequests": 0,
+        "costUSD": 0.0136288,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 615,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.0136288,
+    "duration_ms": 12540
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mr D (34), referred by GP. C = clinician, P = patient.\n\nC: Your GP says you've been struggling with your thoughts.\nP: I can't get him out of my head. My old business partner. Eight months ago he walked out and took half our clients and a lot of money with him.\nC: What goes through your head?\nP: What I'd do to him. I picture it. I play it over and over. Hours a day, some days.\nC: Do the thoughts bother you?\nP: Bother me? [laughs] He's the one who should be bothered. I know it's not right, thinking like that. My mum would be horrified. But honestly it's the only thing that makes me feel better.\nC: Do you try to stop them?\nP: Why would I?\nC: Have you done anything about it?\nP: I found out where he lives now. Drove past a couple of times. Late, so nobody'd see.\nC: Anything else?\nP: Bought a hunting knife last week.\nC: What's that for?\nP: [shrugs] You never know.\nC: How have you been otherwise? Sleep, drinking?\nP: Sleep's rubbish. Five pints most nights, more than I used to.\nC: Any experiences like hearing voices, or feeling something strange is going on?\nP: No. Nothing like that. I'm not mad.\nC: Have you ever been violent before?\nP: A fight when I was nineteen. Nothing since.\nC: Any thoughts of harming yourself?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: Repeated thoughts and images of hurting his former business partner\nS2: Driving past the former partner's house at night\nS3: Buying a hunting knife\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\"S1\": \"other\", \"S2\": \"other\", \"S3\": \"other\"},\n  \"primary_diagnosis\": \"other\",\n  \"ocd_insight\": null,\n  \"ybocs_items\": null,\n  \"ybocs_total\": null,\n  \"severity_band\": null,\n  \"next_step\": \"urgent_risk_assessment\",\n  \"rationale\": \"The repeated violent thoughts and images are welcomed and soothing (ego-syntonic) rather than intrusive and unwanted: he says they make him feel better and he sees no reason to resist them, so they are revenge-focused rumination and not obsessions, and the drive-bys and knife purchase are preparatory behaviours, not compulsions. A specific target, surveillance of the target's home, recently acquiring a weapon with an evasive explanation, escalating alcohol use, poor sleep and a history of violence together indicate a current risk of harm to others, so an urgent risk assessment (including consideration of duty-to-protect obligations) must come before any diagnostic or treatment planning. The primary problem is not OCD; possible contributing conditions (e.g., an alcohol use disorder or an adjustment/mood disorder) need further assessment once risk has been addressed.\"\n}",
+  "grade": {
+    "task_id": "T02_harm_real_risk",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "other",
+      "next_step": "urgent_risk_assessment",
+      "label_errors": {}
+    }
+  }
+}

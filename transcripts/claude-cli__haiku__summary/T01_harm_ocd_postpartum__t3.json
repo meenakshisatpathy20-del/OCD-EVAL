@@ -1,0 +1,121 @@
+{
+  "task_id": "T01_harm_ocd_postpartum",
+  "trial": 3,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:10:51+00:00",
+  "latency_s": 12.0,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 638,
+      "cache_read_input_tokens": 2840,
+      "output_tokens": 1524,
+      "output_tokens_details": {
+        "thinking_tokens": 1185
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 638,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 1524,
+          "cache_read_input_tokens": 2840,
+          "cache_creation_input_tokens": 638,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 638
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 1524,
+        "cacheReadInputTokens": 2840,
+        "cacheCreationInputTokens": 638,
+        "webSearchRequests": 0,
+        "costUSD": 0.0009182000000000001,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 1185,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 638,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.0009182000000000001,
+    "duration_ms": 10839
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMs A, 29, referred by her health visitor four months after the birth of her first child. From about six weeks postpartum she began getting sudden pictures in her head of stabbing her son with a kitchen knife, and of holding him under the bath water. She was shaking when she described them: \"They're disgusting. That's not me. I love him more than anything.\" She has never had any wish or intention to hurt him and has never acted on the images. They come out of nowhere 20 to 30 times a day; added together she thinks they are on her mind for about two hours a day. Every time one comes she fights it and tries to think of something else, but this hardly ever works and the picture is back within seconds. She cries most days and calls it the worst fear she has ever had.\n\nShe has locked all the kitchen knives in the boot of the car, and she has stopped bathing her son; her husband does every bath. Her mother moved in last month because Ms A will not be alone with the baby, and she has postponed her return to work. Ten to fifteen times a day she asks her husband or mother, \"Do you think I could ever hurt him?\" She tries not to ask most of the time but usually ends up asking; on some days she manages to hold back, on others she can't. Each night she lies awake for 30 to 45 minutes going back over the day, minute by minute, to make sure she did nothing harmful. Including the questioning and the night-time going over, she estimates this takes about an hour and a half a day. Her husband is exhausted by the questions but the household is still running. Once, when he refused to answer, she was very anxious for about an hour and then settled.\n\nNo history of psychosis. Mood low-ish but she is eating, sleeping when not reviewing, and enjoys time with her son when others are present. No thoughts of harming herself.\n\nSYMPTOMS TO LABEL\nS1: Sudden images of stabbing her son or holding him under the bath water\nS2: Locking the kitchen knives in the car boot\nS3: Repeatedly asking her husband or mother whether she could ever hurt the baby\nS4: Lying awake going back over the day to make sure she did nothing harmful\nS5: No longer bathing her son herself\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\", \"S3\": \"compulsion\", \"S4\": \"compulsion\", \"S5\": \"avoidance\"}, \"primary_diagnosis\": \"OCD\", \"ocd_insight\": \"good_or_fair\", \"ybocs_items\": [2, 3, 3, 0, 3, 2, 3, 3, 1, 2], \"ybocs_total\": 22, \"severity_band\": \"moderate\", \"next_step\": \"ERP\", \"rationale\": \"Ms A has recurrent, ego-dystonic intrusive images of harming her son that cause marked distress, and she neutralizes them through repeated reassurance seeking, nightly mental reviewing, and safety behaviors, consuming about 1.5 hours a day and causing substantial impairment. She recognizes the images as unwanted and not reflective of her values ('That's not me'), which supports good or fair insight. Y-BOCS total is 22 (moderate), so first-line treatment is exposure and response prevention.\"}",
+  "grade": {
+    "task_id": "T01_harm_ocd_postpartum",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 0.8,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 0.9667,
+    "strict_pass": false,
+    "error": "component_error",
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp",
+      "label_errors": {
+        "S2": {
+          "expected": "avoidance",
+          "got": "compulsion"
+        }
+      },
+      "total": 22,
+      "items": [
+        2,
+        3,
+        3,
+        0,
+        3,
+        2,
+        3,
+        3,
+        1,
+        2
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

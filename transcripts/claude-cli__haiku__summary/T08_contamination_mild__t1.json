@@ -1,0 +1,116 @@
+{
+  "task_id": "T08_contamination_mild",
+  "trial": 1,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:10:03+00:00",
+  "latency_s": 9.1,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 1292,
+      "cache_read_input_tokens": 1906,
+      "output_tokens": 973,
+      "output_tokens_details": {
+        "thinking_tokens": 663
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1292,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 973,
+          "cache_read_input_tokens": 1906,
+          "cache_creation_input_tokens": 1292,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1292
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 973,
+        "cacheReadInputTokens": 1906,
+        "cacheCreationInputTokens": 1292,
+        "webSearchRequests": 0,
+        "costUSD": 0.0007641600000000001,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 663,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 1292,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.0007641600000000001,
+    "duration_ms": 7851
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMs J, 30, ward nurse, self-referred after reading about OCD. For about a year, after shifts, she has had unwanted thoughts that she might be carrying germs from the hospital home to her partner. She knows the hospital's infection-control procedures already make this very unlikely. The thoughts take up about 45 minutes a day; they bother her a little but are not too upsetting. She tries to push them away most of the time and is usually able to put them aside.\n\nAt home she washes her hands and forearms far more than she needs to, about 45 minutes a day in total, so together with the thoughts this takes more than an hour a day. She tries not to do the extra washing most of the time and can usually stop herself when she decides to. When her partner once teased her and turned the tap off, she felt tense and uncomfortable for the rest of the evening. She works full shifts without problems, sees friends, and says it is \"a bit of a nuisance, nothing more\". She does not avoid any places or tasks because of the fears.\n\nMood normal. No substance use. No thoughts of harming herself or anyone else.\n\nSYMPTOMS TO LABEL\nS1: Thoughts that she might be carrying hospital germs home to her partner\nS2: Extra washing of hands and forearms at home\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\"},\n  \"primary_diagnosis\": \"OCD\",\n  \"ocd_insight\": \"good_or_fair\",\n  \"ybocs_items\": [1, 1, 1, 1, 1, 1, 1, 2, 1, 1],\n  \"ybocs_total\": 11,\n  \"severity_band\": \"mild\",\n  \"next_step\": \"ERP\",\n  \"rationale\": \"Ms J has recurrent, unwanted thoughts about carrying hospital germs home, which she tries to push away, and she performs excess hand and forearm washing that she usually can stop. Her thoughts and washing together take more than an hour a day, but she recognizes the fears are unlikely, works and socialises normally, and reports only mild-to-moderate distress. This gives a Y-BOCS total of 11 (mild), so exposure and response prevention is the first-line treatment.\"\n}",
+  "grade": {
+    "task_id": "T08_contamination_mild",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp",
+      "label_errors": {},
+      "total": 11,
+      "items": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

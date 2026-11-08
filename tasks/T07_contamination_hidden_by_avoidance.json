@@ -1,0 +1,11 @@
+{
+  "id": "T07_contamination_hidden_by_avoidance",
+  "pair": "P4_avoidance",
+  "case": "Mr S, 36, referred by his GP. For about two years he has been afraid of catching HIV or hepatitis from traces of blood on public surfaces such as door handles, bus rails and shop counters. He knows the risk is tiny (\"I know it's irrational\"), but the thoughts keep coming. They are on his mind for an hour or two a day, mostly when he is planning how to avoid things. When he thinks he might have touched something he panics; he calls it very disturbing. He makes some effort to push the thoughts away, but he is rarely able to put them aside.\n\nEight months ago he left his job as a bus driver. He now rarely leaves the flat: shopping is delivered, his partner opens all the post, and he will not use public toilets, so he does not go anywhere more than half an hour from home. Because he avoids nearly everything, the washing itself is now short: about 40 minutes a day. He washes without trying to resist, reluctantly, and can put it off for only a few minutes, with great difficulty. Several times a day he asks his partner whether he could have caught anything. Last month his partner put shopping bags on the sofa without wiping them; Mr S had a panic attack and could not sleep that night.\n\nMood low because of the lost job, but no thoughts of harming himself. No psychotic symptoms. Drinks rarely.",
+  "symptoms": {
+    "S1": "Thoughts that he has caught HIV or hepatitis from public surfaces",
+    "S2": "Hand-washing",
+    "S3": "Rarely leaving the flat and having shopping delivered",
+    "S4": "Repeatedly asking his partner whether he could have caught anything"
+  }
+}

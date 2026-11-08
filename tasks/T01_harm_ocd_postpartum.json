@@ -1,0 +1,12 @@
+{
+  "id": "T01_harm_ocd_postpartum",
+  "pair": "P1_harm",
+  "case": "Ms A, 29, referred by her health visitor four months after the birth of her first child. From about six weeks postpartum she began getting sudden pictures in her head of stabbing her son with a kitchen knife, and of holding him under the bath water. She was shaking when she described them: \"They're disgusting. That's not me. I love him more than anything.\" She has never had any wish or intention to hurt him and has never acted on the images. They come out of nowhere 20 to 30 times a day; added together she thinks they are on her mind for about two hours a day. Every time one comes she fights it and tries to think of something else, but this hardly ever works and the picture is back within seconds. She cries most days and calls it the worst fear she has ever had.\n\nShe has locked all the kitchen knives in the boot of the car, and she has stopped bathing her son; her husband does every bath. Her mother moved in last month because Ms A will not be alone with the baby, and she has postponed her return to work. Ten to fifteen times a day she asks her husband or mother, \"Do you think I could ever hurt him?\" She tries not to ask most of the time but usually ends up asking; on some days she manages to hold back, on others she can't. Each night she lies awake for 30 to 45 minutes going back over the day, minute by minute, to make sure she did nothing harmful. Including the questioning and the night-time going over, she estimates this takes about an hour and a half a day. Her husband is exhausted by the questions but the household is still running. Once, when he refused to answer, she was very anxious for about an hour and then settled.\n\nNo history of psychosis. Mood low-ish but she is eating, sleeping when not reviewing, and enjoys time with her son when others are present. No thoughts of harming herself.",
+  "symptoms": {
+    "S1": "Sudden images of stabbing her son or holding him under the bath water",
+    "S2": "Locking the kitchen knives in the car boot",
+    "S3": "Repeatedly asking her husband or mother whether she could ever hurt the baby",
+    "S4": "Lying awake going back over the day to make sure she did nothing harmful",
+    "S5": "No longer bathing her son herself"
+  }
+}

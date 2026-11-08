@@ -1,0 +1,88 @@
+{
+  "task_id": "T04_psychosis_contamination",
+  "trial": 2,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "format": "interview",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T06:42:18+00:00",
+  "latency_s": 10.1,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 636,
+      "cache_read_input_tokens": 2787,
+      "output_tokens": 883,
+      "output_tokens_details": {
+        "thinking_tokens": 572
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 636,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 883,
+          "cache_read_input_tokens": 2787,
+          "cache_creation_input_tokens": 636,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 636
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 883,
+        "cacheReadInputTokens": 2787,
+        "cacheCreationInputTokens": 636,
+        "webSearchRequests": 0,
+        "costUSD": 0.0005967699999999999,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 572,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 636,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.0005967699999999999,
+    "duration_ms": 8675
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mr T (23), second-year student. Mother present. C = clinician, P = patient, M = mother.\n\nM: He's in the bathroom for hours. Hands, arms, showers. I thought it might be OCD; my sister has it.\nC: Can you tell me about the washing?\nP: I have to get it off.\nC: Get what off?\nP: The signals. From next door's router. They coat you. Like a film. I know it sounds mad. You can't see it. He told me.\nC: Who told you?\nP: The man. He talks when I'm on my own. Most days. He says what I'm doing. \"Now he's putting his shoes on.\" Like that.\nC: Can you see him?\nP: No. He's just there. He says I'm covered and I need to wash. So I wash.\nC: How do you feel about the washing?\nP: It's fine. I have to. It's the signals.\nC: Do you ever count or do it in a set way?\nP: Four on each arm. Four is clean. Clean is... the signals come through the walls, through the router, the router puts things in my head, thoughts that aren't mine, his thoughts. That's why the walls.\nC: The router puts thoughts in your head?\nP: The neighbour does it. Through the router.\nM: He stopped going to lectures in the summer. He doesn't see his friends. Doesn't wash his clothes, funnily enough. Just himself.\nC: Any cannabis or other drugs?\nP: Bit of weed. Not since August.\nC: Has the man's voice ever told you to hurt yourself or anyone else?\nP: No. Just washing.\nC: Any thoughts of harming yourself or anyone else?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: Hearing a man's voice that comments on what he is doing\nS2: Belief that the neighbour puts thoughts into his head through the router\nS3: Belief that he is coated in radio signals that must be washed off\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"other\", \"S2\": \"other\", \"S3\": \"other\"}, \"primary_diagnosis\": \"psychotic_disorder\", \"ocd_insight\": null, \"ybocs_items\": null, \"ybocs_total\": null, \"severity_band\": null, \"next_step\": \"not_OCD_refer\", \"rationale\": \"The symptoms are fixed, non-intrusive beliefs (signals coating him, a neighbour inserting thoughts through a router) and a voice commenting on his actions, which are delusions and hallucinations rather than obsessions, and the washing is driven by these beliefs. Because the presentation is not OCD, Y-BOCS ratings and insight are not applicable. He denies any thoughts of harm to self or others and the voice has not told him to harm anyone, so no current risk is identified, and he should be referred for assessment and treatment of the psychotic presentation, with cannabis use considered in that assessment.\"}",
+  "grade": {
+    "task_id": "T04_psychosis_contamination",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "psychotic_disorder",
+      "next_step": "not_ocd_refer",
+      "label_errors": {}
+    }
+  }
+}

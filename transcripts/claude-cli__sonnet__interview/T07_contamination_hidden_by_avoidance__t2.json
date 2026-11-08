@@ -1,0 +1,117 @@
+{
+  "task_id": "T07_contamination_hidden_by_avoidance",
+  "trial": 2,
+  "backend": "claude-cli",
+  "model": "sonnet",
+  "format": "interview",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T06:49:02+00:00",
+  "latency_s": 13.8,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 618,
+      "cache_read_input_tokens": 2858,
+      "output_tokens": 958,
+      "output_tokens_details": {
+        "thinking_tokens": 617
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 618,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 958,
+          "cache_read_input_tokens": 2858,
+          "cache_creation_input_tokens": 618,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 618
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-sonnet-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 958,
+        "cacheReadInputTokens": 2858,
+        "cacheCreationInputTokens": 618,
+        "webSearchRequests": 0,
+        "costUSD": 0.0123418,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 617,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 618,
+        "canonicalModel": "claude-sonnet-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.0123418,
+    "duration_ms": 12495
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mr S (36), referred by GP. C = clinician, P = patient.\n\nP: Honestly, I think my GP's overreacting. It's not that bad any more. Last year I was washing four hours a day. Now it's forty minutes.\nC: What were you worried about, with the washing?\nP: HIV. Hepatitis. Blood on door handles, bus rails, shop counters. I know it's irrational. The risk is tiny. The thoughts still come.\nC: How much of your day do they take now?\nP: An hour or two? Mostly when I'm planning how to not touch things.\nC: And if you think you might have touched something?\nP: I panic. It's horrible. Really disturbing.\nC: Do you try to push the thoughts away?\nP: I make some effort. It rarely works.\nC: How's your life day to day at the moment?\nP: I left the buses eight months ago. I was a driver. I don't really go out now. Shopping gets delivered. My partner opens the post. I don't use public toilets, so I don't go anywhere more than half an hour from home. Which is basically nowhere.\nC: And the washing, the forty minutes?\nP: I just do it. I don't fight it, I wish I didn't have to. I can put it off a few minutes, if I really try. It's hard.\nC: Anything else you do?\nP: I ask my partner if I could have caught something. A few times a day.\nC: What happens if you can't wash?\nP: Last month my partner put the shopping bags on the sofa without wiping them. I had a panic attack. Didn't sleep that night.\nC: Mood?\nP: Low. Because of the job. I'm not going to do anything stupid, if that's what you're asking.\nC: Any other unusual experiences, voices, anything like that?\nP: No.\nC: Alcohol?\nP: Hardly ever.\n\nSYMPTOMS TO LABEL\nS1: Thoughts that he has caught HIV or hepatitis from public surfaces\nS2: Hand-washing\nS3: Rarely leaving the flat and having shopping delivered\nS4: Repeatedly asking his partner whether he could have caught anything\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\", \"S3\": \"avoidance\", \"S4\": \"compulsion\"},\n  \"primary_diagnosis\": \"OCD\",\n  \"ocd_insight\": \"good_or_fair\",\n  \"ybocs_items\": [2, 4, 3, 2, 3, 1, 4, 3, 3, 3],\n  \"ybocs_total\": 28,\n  \"severity_band\": \"severe\",\n  \"next_step\": \"ERP_plus_SSRI\",\n  \"rationale\": \"He has contamination obsessions (HIV, hepatitis) with washing and reassurance seeking as compulsions, plus extensive avoidance. He recognizes the fears are irrational, so insight is good or fair. Obsessions take 1-2 hours a day and washing about 40 minutes, but the avoidance cost him his job and leaves him effectively housebound, so interference is rated as incapacitating. The total of 28 is in the severe band, and he denies any risk to himself or others.\"\n}",
+  "grade": {
+    "task_id": "T07_contamination_hidden_by_avoidance",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp_plus_ssri",
+      "label_errors": {},
+      "total": 28,
+      "items": [
+        2,
+        4,
+        3,
+        2,
+        3,
+        1,
+        4,
+        3,
+        3,
+        3
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

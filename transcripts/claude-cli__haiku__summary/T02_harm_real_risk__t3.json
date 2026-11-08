@@ -1,0 +1,87 @@
+{
+  "task_id": "T02_harm_real_risk",
+  "trial": 3,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:10:56+00:00",
+  "latency_s": 11.7,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 642,
+      "cache_read_input_tokens": 2532,
+      "output_tokens": 736,
+      "output_tokens_details": {
+        "thinking_tokens": 479
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 642,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 736,
+          "cache_read_input_tokens": 2532,
+          "cache_creation_input_tokens": 642,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 642
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 736,
+        "cacheReadInputTokens": 2532,
+        "cacheCreationInputTokens": 642,
+        "webSearchRequests": 0,
+        "costUSD": 0.00052192,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 479,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 642,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.00052192,
+    "duration_ms": 10400
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMr D, 34, referred by his GP after saying he \"can't get the thoughts out of his head\". Eight months ago his business partner left the company and, Mr D believes, took clients and money with him. Since then Mr D thinks for several hours a day about hurting him: \"I picture what I'd do to him. I play it over and over.\" Asked whether the thoughts bother him, he said, \"Not really. He deserves it. Thinking about it makes me feel better.\" He does not try to stop the thoughts: \"Why would I?\"\n\nThree weeks ago he found out where the former partner now lives and has driven past the house twice, late at night. Last week he bought a hunting knife; when asked why, he shrugged and said \"you never know\". He is drinking more than before (about five pints most evenings) and sleeping poorly. He denies hearing voices or any unusual experiences. He has no past psychiatric history and no previous violence, apart from a fight at age 19. He denies thoughts of harming himself.\n\nSYMPTOMS TO LABEL\nS1: Repeated thoughts and images of hurting his former business partner\nS2: Driving past the former partner's house at night\nS3: Buying a hunting knife\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"other\", \"S2\": \"other\", \"S3\": \"other\"}, \"primary_diagnosis\": \"other\", \"ocd_insight\": null, \"ybocs_items\": null, \"ybocs_total\": null, \"severity_band\": null, \"next_step\": \"urgent_risk_assessment\", \"rationale\": \"The thoughts of harming the former partner are ego-syntonic (he says they do not bother him and make him feel better), so they do not meet the definition of obsessions, and the night-time driving and knife purchase are not compulsions aimed at reducing distress. The presentation shows current risk of harm to another person, including surveillance of the partner's home, a recently acquired knife, and escalating drinking, so urgent risk assessment is needed before any other treatment is planned.\"}",
+  "grade": {
+    "task_id": "T02_harm_real_risk",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "other",
+      "next_step": "urgent_risk_assessment",
+      "label_errors": {}
+    }
+  }
+}

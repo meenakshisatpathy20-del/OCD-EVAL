@@ -1,0 +1,61 @@
+{
+  "task_id": "T08_contamination_mild",
+  "trial": 1,
+  "backend": "oracle",
+  "model": "reference",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:08:42+00:00",
+  "latency_s": 0.0,
+  "api_error": null,
+  "meta": {},
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMs J, 30, ward nurse, self-referred after reading about OCD. For about a year, after shifts, she has had unwanted thoughts that she might be carrying germs from the hospital home to her partner. She knows the hospital's infection-control procedures already make this very unlikely. The thoughts take up about 45 minutes a day; they bother her a little but are not too upsetting. She tries to push them away most of the time and is usually able to put them aside.\n\nAt home she washes her hands and forearms far more than she needs to, about 45 minutes a day in total, so together with the thoughts this takes more than an hour a day. She tries not to do the extra washing most of the time and can usually stop herself when she decides to. When her partner once teased her and turned the tap off, she felt tense and uncomfortable for the rest of the evening. She works full shifts without problems, sees friends, and says it is \"a bit of a nuisance, nothing more\". She does not avoid any places or tasks because of the fears.\n\nMood normal. No substance use. No thoughts of harming herself or anyone else.\n\nSYMPTOMS TO LABEL\nS1: Thoughts that she might be carrying hospital germs home to her partner\nS2: Extra washing of hands and forearms at home\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\"}, \"primary_diagnosis\": \"OCD\", \"ocd_insight\": \"good_or_fair\", \"ybocs_items\": [1, 1, 1, 1, 1, 1, 1, 2, 1, 1], \"ybocs_total\": 11, \"severity_band\": \"mild\", \"next_step\": \"ERP\", \"rationale\": \"reference answer\"}",
+  "grade": {
+    "task_id": "T08_contamination_mild",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp",
+      "label_errors": {},
+      "total": 11,
+      "items": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

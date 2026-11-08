@@ -1,0 +1,2 @@
+# No third-party packages. Python standard library only (tested on Python 3.14.5; 3.9+ should work).
+# Optional, only for the claude-cli backend: Claude Code CLI (tested with 2.1.319), logged in.

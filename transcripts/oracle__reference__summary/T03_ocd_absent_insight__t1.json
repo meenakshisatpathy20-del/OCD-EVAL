@@ -1,0 +1,61 @@
+{
+  "task_id": "T03_ocd_absent_insight",
+  "trial": 1,
+  "backend": "oracle",
+  "model": "reference",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:08:42+00:00",
+  "latency_s": 0.0,
+  "api_error": null,
+  "meta": {},
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMrs M, 41, bookkeeper, brought by her husband. For about eight years she has been preoccupied with the idea that invisible traces of the pesticide her neighbour uses in his garden get onto her hands and clothes and will poison her two children. She hates the thoughts and wishes they would stop, but they push into her head through most of the day; she puts it at five to six hours. She is completely certain the danger is real: \"It isn't a fear. It's a fact. I know it's true.\" Her husband and her GP have shown her information about the pesticide and she was not moved at all. She finds the thoughts frightening, but says she can live with them as long as she can wash. She can rarely put them aside.\n\nShe washes her hands around 60 times a day, showers four times a day, and washes any clothes worn outside separately on a hot cycle; altogether about four hours a day. She sees no reason to resist: \"Why would I fight protecting my children?\" When her husband asked her to wait ten minutes before washing, she managed a minute or two, with great difficulty. One afternoon the water was off; she was tense and short-tempered but coped. She keeps the children indoors on the side of the house facing the neighbour's garden. She still works full time, though she is often late, and the family says home life is strained but they are managing.\n\nNo hallucinations. No other unusual beliefs: she does not think the neighbour is targeting her, and her thinking about everything else is clear and organised. Mood is reasonable. No substance use. No thoughts of harming herself or anyone else.\n\nSYMPTOMS TO LABEL\nS1: The belief that pesticide traces on her hands and clothes will poison her children\nS2: Washing her hands about 60 times a day and showering four times a day\nS3: Keeping the children away from the side of the house facing the neighbour's garden\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\", \"S3\": \"avoidance\"}, \"primary_diagnosis\": \"OCD\", \"ocd_insight\": \"absent_delusional\", \"ybocs_items\": [3, 2, 2, 4, 3, 3, 2, 2, 4, 3], \"ybocs_total\": 28, \"severity_band\": \"severe\", \"next_step\": \"ERP_plus_SSRI\", \"rationale\": \"reference answer\"}",
+  "grade": {
+    "task_id": "T03_ocd_absent_insight",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp_plus_ssri",
+      "label_errors": {},
+      "total": 28,
+      "items": [
+        3,
+        2,
+        2,
+        4,
+        3,
+        3,
+        2,
+        2,
+        4,
+        3
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

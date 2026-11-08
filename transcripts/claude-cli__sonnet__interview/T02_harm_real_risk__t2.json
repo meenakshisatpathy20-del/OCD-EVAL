@@ -1,0 +1,88 @@
+{
+  "task_id": "T02_harm_real_risk",
+  "trial": 2,
+  "backend": "claude-cli",
+  "model": "sonnet",
+  "format": "interview",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T06:48:24+00:00",
+  "latency_s": 9.9,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 621,
+      "cache_read_input_tokens": 2704,
+      "output_tokens": 258,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 621,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 258,
+          "cache_read_input_tokens": 2704,
+          "cache_creation_input_tokens": 621,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 621
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-sonnet-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 258,
+        "cacheReadInputTokens": 2704,
+        "cacheCreationInputTokens": 621,
+        "webSearchRequests": 0,
+        "costUSD": 0.0053384,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 621,
+        "canonicalModel": "claude-sonnet-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.0053384,
+    "duration_ms": 8596
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mr D (34), referred by GP. C = clinician, P = patient.\n\nC: Your GP says you've been struggling with your thoughts.\nP: I can't get him out of my head. My old business partner. Eight months ago he walked out and took half our clients and a lot of money with him.\nC: What goes through your head?\nP: What I'd do to him. I picture it. I play it over and over. Hours a day, some days.\nC: Do the thoughts bother you?\nP: Bother me? [laughs] He's the one who should be bothered. I know it's not right, thinking like that. My mum would be horrified. But honestly it's the only thing that makes me feel better.\nC: Do you try to stop them?\nP: Why would I?\nC: Have you done anything about it?\nP: I found out where he lives now. Drove past a couple of times. Late, so nobody'd see.\nC: Anything else?\nP: Bought a hunting knife last week.\nC: What's that for?\nP: [shrugs] You never know.\nC: How have you been otherwise? Sleep, drinking?\nP: Sleep's rubbish. Five pints most nights, more than I used to.\nC: Any experiences like hearing voices, or feeling something strange is going on?\nP: No. Nothing like that. I'm not mad.\nC: Have you ever been violent before?\nP: A fight when I was nineteen. Nothing since.\nC: Any thoughts of harming yourself?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: Repeated thoughts and images of hurting his former business partner\nS2: Driving past the former partner's house at night\nS3: Buying a hunting knife\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\":{\"S1\":\"other\",\"S2\":\"other\",\"S3\":\"other\"},\"primary_diagnosis\":\"other\",\"ocd_insight\":null,\"ybocs_items\":null,\"ybocs_total\":null,\"severity_band\":null,\"next_step\":\"urgent_risk_assessment\",\"rationale\":\"The thoughts of harming the former partner are ego-syntonic, not resisted, and provide relief, so they are not OCD obsessions; the driving past his home and the knife purchase are preparatory behaviors rather than compulsions or avoidance. There is no psychosis, but there is a current risk of violence to an identified person (located his address, drove past at night, bought a knife, heavy drinking, poor sleep), which requires urgent risk assessment before any other treatment is planned.\"}",
+  "grade": {
+    "task_id": "T02_harm_real_risk",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "other",
+      "next_step": "urgent_risk_assessment",
+      "label_errors": {}
+    }
+  }
+}

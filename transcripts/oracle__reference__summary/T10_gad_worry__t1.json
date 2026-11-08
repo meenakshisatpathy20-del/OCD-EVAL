@@ -1,0 +1,32 @@
+{
+  "task_id": "T10_gad_worry",
+  "trial": 1,
+  "backend": "oracle",
+  "model": "reference",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:08:42+00:00",
+  "latency_s": 0.0,
+  "api_error": null,
+  "meta": {},
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMrs K, 45, school administrator, referred by her GP. For about two and a half years she has worried most days about many things: money and whether the family can afford the mortgage, her son's exams, her mother's health, whether her job is secure, being late. The topic moves from one thing to the next. She says the thoughts \"go round and round and I can't switch them off\", especially at night. She sees them as real-life concerns but says she worries \"far too much\" about them.\n\nShe has muscle tension in her neck and shoulders, poor sleep, irritability and tiredness most days. She has no thoughts or images that feel foreign, senseless or against her values, and there is nothing she does repeatedly or in her head to cancel out the worries or prevent harm. She keeps working and looks after the family, though she says she is \"always on edge\". She does not avoid places or situations. No panic attacks. Drinks one glass of wine on weekends. No thoughts of harming herself or anyone else.\n\nSYMPTOMS TO LABEL\nS1: Worrying about money and whether her job is secure\nS2: Worrying about her son's exams and her mother's health\nS3: Muscle tension and poor sleep\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"other\", \"S2\": \"other\", \"S3\": \"other\"}, \"primary_diagnosis\": \"GAD\", \"ocd_insight\": null, \"ybocs_items\": null, \"ybocs_total\": null, \"severity_band\": null, \"next_step\": \"not_OCD_refer\", \"rationale\": \"reference answer\"}",
+  "grade": {
+    "task_id": "T10_gad_worry",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "gad",
+      "next_step": "not_ocd_refer",
+      "label_errors": {}
+    }
+  }
+}

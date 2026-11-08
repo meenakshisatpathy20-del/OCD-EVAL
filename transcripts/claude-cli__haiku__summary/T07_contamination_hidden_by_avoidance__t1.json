@@ -1,0 +1,116 @@
+{
+  "task_id": "T07_contamination_hidden_by_avoidance",
+  "trial": 1,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:10:00+00:00",
+  "latency_s": 11.9,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 1412,
+      "cache_read_input_tokens": 1906,
+      "output_tokens": 1399,
+      "output_tokens_details": {
+        "thinking_tokens": 1111
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1412,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 1399,
+          "cache_read_input_tokens": 1906,
+          "cache_creation_input_tokens": 1412,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1412
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 1399,
+        "cacheReadInputTokens": 1906,
+        "cacheCreationInputTokens": 1412,
+        "webSearchRequests": 0,
+        "costUSD": 0.00100116,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 1111,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 1412,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.00100116,
+    "duration_ms": 10508
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMr S, 36, referred by his GP. For about two years he has been afraid of catching HIV or hepatitis from traces of blood on public surfaces such as door handles, bus rails and shop counters. He knows the risk is tiny (\"I know it's irrational\"), but the thoughts keep coming. They are on his mind for an hour or two a day, mostly when he is planning how to avoid things. When he thinks he might have touched something he panics; he calls it very disturbing. He makes some effort to push the thoughts away, but he is rarely able to put them aside.\n\nEight months ago he left his job as a bus driver. He now rarely leaves the flat: shopping is delivered, his partner opens all the post, and he will not use public toilets, so he does not go anywhere more than half an hour from home. Because he avoids nearly everything, the washing itself is now short: about 40 minutes a day. He washes without trying to resist, reluctantly, and can put it off for only a few minutes, with great difficulty. Several times a day he asks his partner whether he could have caught anything. Last month his partner put shopping bags on the sofa without wiping them; Mr S had a panic attack and could not sleep that night.\n\nMood low because of the lost job, but no thoughts of harming himself. No psychotic symptoms. Drinks rarely.\n\nSYMPTOMS TO LABEL\nS1: Thoughts that he has caught HIV or hepatitis from public surfaces\nS2: Hand-washing\nS3: Rarely leaving the flat and having shopping delivered\nS4: Repeatedly asking his partner whether he could have caught anything\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\", \"S3\": \"avoidance\", \"S4\": \"compulsion\"}, \"primary_diagnosis\": \"OCD\", \"ocd_insight\": \"good_or_fair\", \"ybocs_items\": [2, 3, 3, 2, 3, 1, 3, 3, 3, 3], \"ybocs_total\": 26, \"severity_band\": \"severe\", \"next_step\": \"ERP_plus_SSRI\", \"rationale\": \"Recurrent intrusive contamination thoughts with washing and reassurance seeking, which he recognizes as irrational, meet criteria for OCD with good or fair insight. The Y-BOCS total of 26 is in the severe range, and the avoidance has caused major functional loss, including leaving his job and largely staying at home. No current risk of harm to self or others is reported.\"}",
+  "grade": {
+    "task_id": "T07_contamination_hidden_by_avoidance",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp_plus_ssri",
+      "label_errors": {},
+      "total": 26,
+      "items": [
+        2,
+        3,
+        3,
+        2,
+        3,
+        1,
+        3,
+        3,
+        3,
+        3
+      ],
+      "item_abs_err": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

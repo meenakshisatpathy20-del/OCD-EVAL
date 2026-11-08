@@ -1,0 +1,48 @@
+{
+  "task_id": "T04_psychosis_contamination",
+  "trial": 1,
+  "backend": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "format": "interview",
+  "temperature": 1.0,
+  "timestamp_utc": "2026-11-08T09:23:41+00:00",
+  "latency_s": 2.0,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "promptTokenCount": 1781,
+      "candidatesTokenCount": 183,
+      "totalTokenCount": 1964,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1781
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "finish_reason": "STOP",
+    "model_version": "gemini-3.1-flash-lite"
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mr T (23), second-year student. Mother present. C = clinician, P = patient, M = mother.\n\nM: He's in the bathroom for hours. Hands, arms, showers. I thought it might be OCD; my sister has it.\nC: Can you tell me about the washing?\nP: I have to get it off.\nC: Get what off?\nP: The signals. From next door's router. They coat you. Like a film. I know it sounds mad. You can't see it. He told me.\nC: Who told you?\nP: The man. He talks when I'm on my own. Most days. He says what I'm doing. \"Now he's putting his shoes on.\" Like that.\nC: Can you see him?\nP: No. He's just there. He says I'm covered and I need to wash. So I wash.\nC: How do you feel about the washing?\nP: It's fine. I have to. It's the signals.\nC: Do you ever count or do it in a set way?\nP: Four on each arm. Four is clean. Clean is... the signals come through the walls, through the router, the router puts things in my head, thoughts that aren't mine, his thoughts. That's why the walls.\nC: The router puts thoughts in your head?\nP: The neighbour does it. Through the router.\nM: He stopped going to lectures in the summer. He doesn't see his friends. Doesn't wash his clothes, funnily enough. Just himself.\nC: Any cannabis or other drugs?\nP: Bit of weed. Not since August.\nC: Has the man's voice ever told you to hurt yourself or anyone else?\nP: No. Just washing.\nC: Any thoughts of harming yourself or anyone else?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: Hearing a man's voice that comments on what he is doing\nS2: Belief that the neighbour puts thoughts into his head through the router\nS3: Belief that he is coated in radio signals that must be washed off\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\n    \"S1\": \"other\",\n    \"S2\": \"other\",\n    \"S3\": \"other\"\n  },\n  \"primary_diagnosis\": \"psychotic_disorder\",\n  \"ocd_insight\": null,\n  \"ybocs_items\": null,\n  \"ybocs_total\": null,\n  \"severity_band\": null,\n  \"next_step\": \"not_OCD_refer\",\n  \"rationale\": \"The patient reports auditory hallucinations (hearing a voice commenting on his actions) and complex delusional beliefs regarding a neighbor controlling his thoughts via a router. These symptoms are characteristic of a psychotic disorder rather than OCD, as the washing behavior is driven by delusional content rather than the ego-dystonic, intrusive obsessions typical of OCD.\"\n}",
+  "grade": {
+    "task_id": "T04_psychosis_contamination",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "psychotic_disorder",
+      "next_step": "not_ocd_refer",
+      "label_errors": {}
+    }
+  }
+}

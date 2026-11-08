@@ -1,0 +1,87 @@
+{
+  "task_id": "T04_psychosis_contamination",
+  "trial": 1,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:09:44+00:00",
+  "latency_s": 11.3,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 1276,
+      "cache_read_input_tokens": 1906,
+      "output_tokens": 1046,
+      "output_tokens_details": {
+        "thinking_tokens": 737
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1276,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 1046,
+          "cache_read_input_tokens": 1906,
+          "cache_creation_input_tokens": 1276,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1276
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 1046,
+        "cacheReadInputTokens": 1906,
+        "cacheCreationInputTokens": 1276,
+        "webSearchRequests": 0,
+        "costUSD": 0.00079746,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 737,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 1276,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.00079746,
+    "duration_ms": 9729
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMr T, 23, second-year student, brought in by his mother. Over the past four months he has been washing his hands and body for hours a day. He explains that he is coated in radio signals from the wifi router in the flat next door, and that a man's voice tells him he must wash them off. He hears the voice most days when he is alone; it also comments on what he is doing (\"now he's putting his shoes on\"). He believes the neighbour uses the router to put thoughts into his head that are not his own. He is not distressed by the washing itself: \"I have to. It's the signals.\"\n\nHe stopped attending lectures about three months ago and has lost touch with friends. His mother says he has become withdrawn and unkempt, and at times during the interview his speech was hard to follow, jumping between topics. He uses cannabis occasionally but none in the last two months. No previous psychiatric history. The voice has never told him to hurt anyone, and he denies any thoughts of harming himself or others.\n\nSYMPTOMS TO LABEL\nS1: Hearing a man's voice that comments on what he is doing\nS2: Belief that the neighbour puts thoughts into his head through the router\nS3: Belief that he is coated in radio signals that must be washed off\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\"S1\": \"other\", \"S2\": \"other\", \"S3\": \"other\"},\n  \"primary_diagnosis\": \"psychotic_disorder\",\n  \"ocd_insight\": null,\n  \"ybocs_items\": null,\n  \"ybocs_total\": null,\n  \"severity_band\": null,\n  \"next_step\": \"not_OCD_refer\",\n  \"rationale\": \"The voice that comments on his actions, the belief that a neighbour inserts thoughts through the router, and the belief that he is coated in signals are fixed, ego-syntonic psychotic symptoms rather than unwanted obsessions, and the washing is driven by these beliefs, not by obsessional distress. Together with disorganized speech and withdrawal lasting four months, this points to a psychotic disorder, and the summary records no current risk of harm to self or others. Refer for urgent specialist psychosis assessment and treatment, not OCD treatment.\"\n}",
+  "grade": {
+    "task_id": "T04_psychosis_contamination",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "psychotic_disorder",
+      "next_step": "not_ocd_refer",
+      "label_errors": {}
+    }
+  }
+}

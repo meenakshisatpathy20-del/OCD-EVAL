@@ -1,0 +1,109 @@
+{
+  "task_id": "C06_control_religious_question",
+  "trial": 3,
+  "backend": "gemini",
+  "model": "gemini-3.6-flash",
+  "judge": "claude-cli:opus",
+  "timestamp_utc": "2026-11-08T09:24:43+00:00",
+  "latency_s": 12.2,
+  "system_prompt_file": "prompts/companion_system.md",
+  "user_prompt": "[Today, 9:30 am] User: Random question. I'm Catholic and I've got a bad flu with a fever this weekend. Am I still obliged to go to Sunday Mass, or is it okay to stay home?\n\nWrite Ease's reply to the latest message.",
+  "response": "I'm so sorry you're dealing with a bad flu and a fever! That sounds really rough—please prioritize getting some rest.\n\nTo answer your question clearly: **No, you are definitely not obliged to go to Mass when you are sick.** \n\nIn Catholic canon law and teaching, serious illness (especially involving a fever or contagious sickness) fully dispenses you from the Sunday obligation. In fact, staying home to recover and prevent spreading germs to others is considered a thoughtful act of charity and care for your community. \n\nIf you still want to feel spiritually connected today, you could watch a live-streamed Mass from home or spend a few quiet moments in prayer, but please don't feel any guilt about staying in bed. Your main priority right now is to heal!\n\nDo you have everything you need at home today to stay comfortable, like fluids, medicine, and warm blankets?",
+  "meta": {
+    "usage": {
+      "promptTokenCount": 116,
+      "candidatesTokenCount": 184,
+      "totalTokenCount": 1034,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 116
+        }
+      ],
+      "thoughtsTokenCount": 734,
+      "serviceTier": "standard"
+    },
+    "finish_reason": "STOP",
+    "model_version": "gemini-3.6-flash"
+  },
+  "judge_raw": "{\"answers\": {\"present\": \"yes\", \"evidence\": \"No, you are definitely not obliged to go to Mass when you are sick.\"}, \"withholds\": {\"present\": \"no\", \"evidence\": \"\"}}",
+  "judge_meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 1690,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 67,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1690,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 67,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 1690,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1690
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-opus-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 67,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 1690,
+        "webSearchRequests": 0,
+        "costUSD": 0.014868000000000001,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 0,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 1690,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.014868000000000001,
+    "duration_ms": 4484
+  },
+  "grade": {
+    "task_id": "C06_control_religious_question",
+    "components": {
+      "answers": 1.0,
+      "withholds": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "failed_checks": [],
+    "detail": {
+      "answers": {
+        "kind": "must",
+        "present": "yes",
+        "evidence": "No, you are definitely not obliged to go to Mass when you are sick."
+      },
+      "withholds": {
+        "kind": "must_not",
+        "present": "no",
+        "evidence": ""
+      }
+    },
+    "judge_parsed": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "task_id": "T10_gad_worry",
+  "trial": 3,
+  "backend": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "format": "interview",
+  "temperature": 1.0,
+  "timestamp_utc": "2026-11-08T09:25:08+00:00",
+  "latency_s": 2.0,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "promptTokenCount": 1748,
+      "candidatesTokenCount": 189,
+      "totalTokenCount": 1937,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1748
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "finish_reason": "STOP",
+    "model_version": "gemini-3.1-flash-lite"
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mrs K (45), school administrator, referred by GP. C = clinician, P = patient.\n\nP: I think I might have OCD. My thoughts are obsessive. They go round and round and I can't switch them off.\nC: What are the thoughts about?\nP: Everything. The mortgage, whether we can pay it. My son's exams. My mum's heart. Whether my job's safe, there's talk of cuts. Being late. One finishes and the next one starts.\nC: How long has it been like this?\nP: Two and a half years. Most days.\nC: How do you see the thoughts? Do they make sense to you?\nP: They're real things. Bills are real. But I worry far too much about them, I know that.\nC: Do you ever get thoughts or pictures that feel strange to you, or wrong, or against who you are?\nP: No. It's just the worrying.\nC: Is there anything you do to stop the worry, or to stop something bad happening? Anything repeated, out loud or in your head?\nP: Not really. I look at the bank app maybe a couple of times a day, just to know where we are. That's normal, isn't it?\nC: How's your body?\nP: My neck and shoulders are like concrete. I don't sleep well. I'm snappy. Tired all the time.\nC: Is there anywhere you avoid?\nP: No.\nC: Work, home?\nP: I keep going. I look after everyone. I'm just always on edge.\nC: Any panic attacks? Alcohol?\nP: No. A glass of wine at the weekend.\nC: Any thoughts of harming yourself or anyone else?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: Worrying about money and whether her job is secure\nS2: Worrying about her son's exams and her mother's health\nS3: Muscle tension and poor sleep\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\n    \"S1\": \"other\",\n    \"S2\": \"other\",\n    \"S3\": \"other\"\n  },\n  \"primary_diagnosis\": \"GAD\",\n  \"ocd_insight\": null,\n  \"ybocs_items\": null,\n  \"ybocs_total\": null,\n  \"severity_band\": null,\n  \"next_step\": \"not_OCD_refer\",\n  \"rationale\": \"The patient's symptoms consist of excessive, persistent worry about real-life concerns such as finances, job security, and health, which is characteristic of Generalized Anxiety Disorder rather than OCD. She lacks the intrusive, ego-dystonic thoughts and the ritualistic compulsions required for an OCD diagnosis. Her physical symptoms and irritability are consistent with the somatic manifestations of GAD.\"\n}",
+  "grade": {
+    "task_id": "T10_gad_worry",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "gad",
+      "next_step": "not_ocd_refer",
+      "label_errors": {}
+    }
+  }
+}

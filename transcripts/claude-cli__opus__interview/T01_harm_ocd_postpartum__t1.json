@@ -1,0 +1,117 @@
+{
+  "task_id": "T01_harm_ocd_postpartum",
+  "trial": 1,
+  "backend": "claude-cli",
+  "model": "opus",
+  "format": "interview",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T06:50:41+00:00",
+  "latency_s": 23.2,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 1835,
+      "cache_read_input_tokens": 1906,
+      "output_tokens": 1416,
+      "output_tokens_details": {
+        "thinking_tokens": 969
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1835,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 1416,
+          "cache_read_input_tokens": 1906,
+          "cache_creation_input_tokens": 1835,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1835
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-opus-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 1416,
+        "cacheReadInputTokens": 1906,
+        "cacheCreationInputTokens": 1835,
+        "webSearchRequests": 0,
+        "costUSD": 0.0433892,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 969,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 1835,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.0433892,
+    "duration_ms": 21737
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Ms A (29), four months postpartum. Husband present for the last part. C = clinician, P = patient, H = husband.\n\nC: What's brought you in today?\nP: My health visitor made me come. I keep getting these... pictures. Of me hurting him. Stabbing him with the big knife from the kitchen. Or holding him under in the bath. [crying] I'd never. I'd rather die than hurt him.\nC: When you say you'd rather die, have you had any thoughts of ending your life?\nP: No. No, it's just something you say. I want to be here for him.\nC: Tell me about the pictures. How often do they come?\nP: When it started, about six weeks after he was born, it was all day, every day. I couldn't do anything. It's a bit less now. This past week they come out of nowhere, twenty, thirty times a day. If I added it all up, a couple of hours a day.\nC: What do you do when one comes?\nP: I fight it. Every single time. I try to think of something else, anything. It hardly ever works. It's back in seconds.\nC: How upsetting is it?\nP: It's the worst thing I've ever felt. I cry most days. I keep thinking maybe I'm dangerous. Maybe someone should take him off me.\nC: Has anything changed in what you do day to day?\nP: The knives are locked in the boot of the car. I don't bath him any more, he does [nods at husband], every bath. My mum moved in last month because I won't be on my own with him. I was meant to go back to work in September and I've put it off.\nC: Is there anything you do to make yourself feel better when the pictures come?\nP: I ask them. \"Do you think I could ever hurt him?\" Ten, fifteen times a day. I try not to, most of the time, but I usually end up asking anyway. Some days I can hold it in, some days I can't. And at night I lie there going back over the whole day, minute by minute, making sure I didn't do anything to him. Half an hour, forty-five minutes. I've been reading stories online about mothers who did hurt their babies too, to see if I'm like them.\nC: Roughly how much time does all of that take, the asking, the going back over, the reading?\nP: An hour and a half a day? This week, anyway.\nC: What happens if you can't ask?\nP: Last week he said he wasn't going to answer any more. I was really, really anxious. For about an hour. Then it settled.\nC [to husband]: How are things at home?\nH: Tiring. The questions wear me down, honestly. But we're managing. The house runs, the baby's fine. She's lovely with him when we're around.\n\nSYMPTOMS TO LABEL\nS1: Sudden images of stabbing her son or holding him under the bath water\nS2: Locking the kitchen knives in the car boot\nS3: Repeatedly asking her husband or mother whether she could ever hurt the baby\nS4: Lying awake going back over the day to make sure she did nothing harmful\nS5: No longer bathing her son herself\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"avoidance\", \"S3\": \"compulsion\", \"S4\": \"compulsion\", \"S5\": \"avoidance\"},\n  \"primary_diagnosis\": \"OCD\",\n  \"ocd_insight\": \"good_or_fair\",\n  \"ybocs_items\": [2, 3, 3, 0, 3, 2, 3, 2, 1, 2],\n  \"ybocs_total\": 21,\n  \"severity_band\": \"moderate\",\n  \"next_step\": \"ERP\",\n  \"rationale\": \"Ms A has postpartum OCD: unwanted harm images that she finds repugnant and fights every time, with reassurance seeking, night-time mental reviewing and checking stories online, plus avoidance of knives, bathing and being alone with her son. There is no suicidal ideation (she clarified that 'rather die' was a figure of speech) and no indication of intent; ego-dystonic intrusive harm thoughts in OCD do not signal an increased risk of acting on them, so no urgent risk assessment is needed. Insight is good or fair because she believes she would never hurt him and only fears she 'maybe' is dangerous. Interference is rated 3 because avoidance means she cannot be alone with the baby and has postponed returning to work. The total of 21 is moderate, so ERP is indicated.\"\n}",
+  "grade": {
+    "task_id": "T01_harm_ocd_postpartum",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp",
+      "label_errors": {},
+      "total": 21,
+      "items": [
+        2,
+        3,
+        3,
+        0,
+        3,
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

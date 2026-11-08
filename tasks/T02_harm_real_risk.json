@@ -1,0 +1,10 @@
+{
+  "id": "T02_harm_real_risk",
+  "pair": "P1_harm",
+  "case": "Mr D, 34, referred by his GP after saying he \"can't get the thoughts out of his head\". Eight months ago his business partner left the company and, Mr D believes, took clients and money with him. Since then Mr D thinks for several hours a day about hurting him: \"I picture what I'd do to him. I play it over and over.\" Asked whether the thoughts bother him, he said, \"Not really. He deserves it. Thinking about it makes me feel better.\" He does not try to stop the thoughts: \"Why would I?\"\n\nThree weeks ago he found out where the former partner now lives and has driven past the house twice, late at night. Last week he bought a hunting knife; when asked why, he shrugged and said \"you never know\". He is drinking more than before (about five pints most evenings) and sleeping poorly. He denies hearing voices or any unusual experiences. He has no past psychiatric history and no previous violence, apart from a fight at age 19. He denies thoughts of harming himself.",
+  "symptoms": {
+    "S1": "Repeated thoughts and images of hurting his former business partner",
+    "S2": "Driving past the former partner's house at night",
+    "S3": "Buying a hunting knife"
+  }
+}

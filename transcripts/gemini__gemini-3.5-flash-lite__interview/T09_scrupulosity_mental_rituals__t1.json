@@ -1,0 +1,77 @@
+{
+  "task_id": "T09_scrupulosity_mental_rituals",
+  "trial": 1,
+  "backend": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "format": "interview",
+  "temperature": 1.0,
+  "timestamp_utc": "2026-11-08T09:23:50+00:00",
+  "latency_s": 2.0,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "promptTokenCount": 1881,
+      "candidatesTokenCount": 272,
+      "totalTokenCount": 2153,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1881
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "finish_reason": "STOP",
+    "model_version": "gemini-3.5-flash-lite"
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Ms R (27), administrator, self-referred. C = clinician, P = patient.\n\nP: My mum says I'm just very devout. Maybe she's right and I'm just a bad Catholic.\nC: What's been happening?\nP: I get thoughts. About God. Horrible things, insults, words I'd never say. Pictures I can't describe to you. About Our Lady. [long pause] It's the opposite of what I believe.\nC: How much of the day?\nP: About two hours, all together.\nC: What do you do when they come?\nP: I fight every single one. I try to push it out. It almost never works.\nC: How upsetting is it?\nP: Very. It's the worst part of my life.\nC: Is there anything you do after a thought, to put it right?\nP: I say a Hail Mary in my head. Seven times. Exactly seven. If I lose count I start again. Nobody knows, it's all in my head.\nC: Anything else?\nP: I go back over the thought. Did I mean it? Did I want to think it? Was there a part of me that enjoyed it? I go round and round on that.\nC: How long does the praying and going back over take?\nP: An hour and a half a day, maybe.\nC: Do you try not to do the prayers?\nP: No, I just do them. I wish I didn't need them. Sometimes I manage to skip one.\nC: And if you're interrupted?\nP: I just finish later. It bothers me a little.\nC: Anything you've stopped doing?\nP: Mass. I haven't been since Easter. It's worst in church. That's where I used to feel most at home.\nC: Do you talk to anyone about it?\nP: The priest. Every week, at confession. I ask him if I've sinned. I ask him again. He's very patient.\nC: How's work?\nP: I'm slower. I'm managing.\nC: Mood? Any thoughts of harming yourself or anyone else?\nP: A bit low. No, nothing like that.\n\nSYMPTOMS TO LABEL\nS1: Sudden blasphemous thoughts and images\nS2: Silently repeating a prayer exactly seven times after each thought\nS3: Going back over each thought in her head to work out whether she meant it\nS4: Asking the priest repeatedly whether she has committed a sin\nS5: No longer going to Sunday Mass\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\n    \"S1\": \"obsession\",\n    \"S2\": \"compulsion\",\n    \"S3\": \"compulsion\",\n    \"S4\": \"compulsion\",\n    \"S5\": \"avoidance\"\n  },\n  \"primary_diagnosis\": \"OCD\",\n  \"ocd_insight\": \"good_or_fair\",\n  \"ybocs_items\": [\n    2,\n    2,\n    3,\n    0,\n    0,\n    1,\n    2,\n    1,\n    3,\n    2\n  ],\n  \"ybocs_total\": 16,\n  \"severity_band\": \"moderate\",\n  \"next_step\": \"ERP\",\n  \"rationale\": \"Ms R presents with classic religious obsessions regarding blasphemous thoughts and images, accompanied by mental compulsions (repeating prayers, reviewing thoughts), reassurance-seeking from a priest, and avoidance of Mass. Her obsessions and compulsions occupy several hours daily and cause moderate interference with her daily life and social/religious functioning, placing her in the moderate severity band. Therefore, Exposure and Response Prevention (ERP) is the appropriate first-line treatment.\"\n}",
+  "grade": {
+    "task_id": "T09_scrupulosity_mental_rituals",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 0.0
+    },
+    "score": 0.8333,
+    "strict_pass": false,
+    "error": "component_error",
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp",
+      "label_errors": {},
+      "total": 16,
+      "items": [
+        2,
+        2,
+        3,
+        0,
+        0,
+        1,
+        2,
+        1,
+        3,
+        2
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "T09_scrupulosity_mental_rituals",
+  "pair": "P5_mental",
+  "case": "Ms R, 27, administrator, practising Catholic, self-referred. For eighteen months she has had sudden blasphemous thoughts, words and images, insults to God and obscene images involving religious figures, which she finds horrifying and completely against what she believes. She fights every single one, trying to push it out of her mind, but this almost never works. The thoughts take up about two hours a day. She calls them very disturbing.\n\nNobody around her has noticed anything; her family thinks she is \"just very religious\". After each thought she silently repeats a particular prayer exactly seven times, starting again if she loses count. She also spends long periods going back over each thought in her head to work out whether she \"meant it\" and therefore sinned. The silent prayers and the reviewing take about an hour and a half a day. She doesn't try to stop the prayers, though she wishes she didn't need them, and sometimes she manages to skip one. If she is interrupted she simply finishes later, which bothers her a little. Every week she goes to the priest and asks, several times over, whether she has committed a sin.\n\nShe has stopped going to Sunday Mass, which used to matter a great deal to her, because the thoughts are worst in church. She is slower at work but managing. Mood a little low. No thoughts of harming herself or anyone else. No psychotic symptoms.",
+  "symptoms": {
+    "S1": "Sudden blasphemous thoughts and images",
+    "S2": "Silently repeating a prayer exactly seven times after each thought",
+    "S3": "Going back over each thought in her head to work out whether she meant it",
+    "S4": "Asking the priest repeatedly whether she has committed a sin",
+    "S5": "No longer going to Sunday Mass"
+  }
+}

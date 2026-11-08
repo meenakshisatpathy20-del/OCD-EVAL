@@ -1,0 +1,87 @@
+{
+  "task_id": "T05_ocpd_perfectionism",
+  "trial": 1,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:09:54+00:00",
+  "latency_s": 9.3,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 1314,
+      "cache_read_input_tokens": 1906,
+      "output_tokens": 772,
+      "output_tokens_details": {
+        "thinking_tokens": 475
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1314,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 772,
+          "cache_read_input_tokens": 1906,
+          "cache_creation_input_tokens": 1314,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1314
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 772,
+        "cacheReadInputTokens": 1906,
+        "cacheCreationInputTokens": 1314,
+        "webSearchRequests": 0,
+        "costUSD": 0.00066806,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 475,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 1314,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.00066806,
+    "duration_ms": 7955
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMr G, 52, engineering manager, attended because his wife insisted. She describes him as having been \"like this as long as I've known him\". He redoes his junior staff's reports himself because he considers them sloppy, and his team has missed two project deadlines this year because he would not sign off a report until the formatting and wording were exactly as he wanted. He plans weekends with detailed lists and schedules and becomes irritable if the family changes the plan. He keeps decades of old technical manuals and broken appliances in the garage because they \"might be useful\", and he is reluctant to spend money even when the family is comfortable.\n\nHe does not see a problem: \"Standards matter. If I don't do it properly, nobody will.\" He enjoys getting things right and feels satisfied when work is done his way. He denies any unwanted or intrusive thoughts, and denies any urge to repeat actions to stop something bad happening or to relieve anxiety. The only distress he reports comes from arguments with his wife and his staff about how things should be done. Mood normal. No substance misuse. No thoughts of harming himself or others.\n\nSYMPTOMS TO LABEL\nS1: Redoing his staff's reports himself until they meet his standards\nS2: Planning weekends with detailed lists and schedules\nS3: Keeping old manuals and broken appliances that might be useful\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"other\", \"S2\": \"other\", \"S3\": \"other\"}, \"primary_diagnosis\": \"OCPD\", \"ocd_insight\": null, \"ybocs_items\": null, \"ybocs_total\": null, \"severity_band\": null, \"next_step\": \"not_OCD_refer\", \"rationale\": \"Mr G reports no intrusive thoughts or urges to repeat actions to reduce anxiety, and his perfectionism, rigidity, control of others' work, and reluctance to spend are experienced as correct and ego-syntonic, which fits a pervasive pattern of perfectionism and control rather than OCD. The three listed behaviors are personality-type traits, not obsessions or compulsions, and he reports no current risk of harm to self or others. He should be referred for assessment and treatment of personality-related difficulties, with his distress from interpersonal conflict as the focus.\"}",
+  "grade": {
+    "task_id": "T05_ocpd_perfectionism",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocpd",
+      "next_step": "not_ocd_refer",
+      "label_errors": {}
+    }
+  }
+}

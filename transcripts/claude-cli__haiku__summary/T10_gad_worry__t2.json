@@ -1,0 +1,87 @@
+{
+  "task_id": "T10_gad_worry",
+  "trial": 2,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:10:45+00:00",
+  "latency_s": 7.3,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 641,
+      "cache_read_input_tokens": 2524,
+      "output_tokens": 493,
+      "output_tokens_details": {
+        "thinking_tokens": 227
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 641,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 493,
+          "cache_read_input_tokens": 2524,
+          "cache_creation_input_tokens": 641,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 641
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 493,
+        "cacheReadInputTokens": 2524,
+        "cacheCreationInputTokens": 641,
+        "webSearchRequests": 0,
+        "costUSD": 0.00040014,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 227,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 641,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.00040014,
+    "duration_ms": 6122
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMrs K, 45, school administrator, referred by her GP. For about two and a half years she has worried most days about many things: money and whether the family can afford the mortgage, her son's exams, her mother's health, whether her job is secure, being late. The topic moves from one thing to the next. She says the thoughts \"go round and round and I can't switch them off\", especially at night. She sees them as real-life concerns but says she worries \"far too much\" about them.\n\nShe has muscle tension in her neck and shoulders, poor sleep, irritability and tiredness most days. She has no thoughts or images that feel foreign, senseless or against her values, and there is nothing she does repeatedly or in her head to cancel out the worries or prevent harm. She keeps working and looks after the family, though she says she is \"always on edge\". She does not avoid places or situations. No panic attacks. Drinks one glass of wine on weekends. No thoughts of harming herself or anyone else.\n\nSYMPTOMS TO LABEL\nS1: Worrying about money and whether her job is secure\nS2: Worrying about her son's exams and her mother's health\nS3: Muscle tension and poor sleep\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"other\", \"S2\": \"other\", \"S3\": \"other\"}, \"primary_diagnosis\": \"GAD\", \"ocd_insight\": null, \"ybocs_items\": null, \"ybocs_total\": null, \"severity_band\": null, \"next_step\": \"not_OCD_refer\", \"rationale\": \"Mrs K has about two and a half years of excessive, hard-to-control worry about multiple real-life concerns, with somatic symptoms, sleep disturbance, irritability and fatigue, which fits GAD. Her worries are ego-syntonic and she does not report intrusive, unwanted obsessions or compulsions, so OCD is not the primary diagnosis. She reports no current risk of harm to herself or others, so referral for GAD assessment and treatment is appropriate.\"}",
+  "grade": {
+    "task_id": "T10_gad_worry",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "gad",
+      "next_step": "not_ocd_refer",
+      "label_errors": {}
+    }
+  }
+}

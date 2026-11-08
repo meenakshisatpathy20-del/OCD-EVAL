@@ -1,0 +1,32 @@
+{
+  "task_id": "T04_psychosis_contamination",
+  "trial": 1,
+  "backend": "oracle",
+  "model": "reference",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:08:42+00:00",
+  "latency_s": 0.0,
+  "api_error": null,
+  "meta": {},
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMr T, 23, second-year student, brought in by his mother. Over the past four months he has been washing his hands and body for hours a day. He explains that he is coated in radio signals from the wifi router in the flat next door, and that a man's voice tells him he must wash them off. He hears the voice most days when he is alone; it also comments on what he is doing (\"now he's putting his shoes on\"). He believes the neighbour uses the router to put thoughts into his head that are not his own. He is not distressed by the washing itself: \"I have to. It's the signals.\"\n\nHe stopped attending lectures about three months ago and has lost touch with friends. His mother says he has become withdrawn and unkempt, and at times during the interview his speech was hard to follow, jumping between topics. He uses cannabis occasionally but none in the last two months. No previous psychiatric history. The voice has never told him to hurt anyone, and he denies any thoughts of harming himself or others.\n\nSYMPTOMS TO LABEL\nS1: Hearing a man's voice that comments on what he is doing\nS2: Belief that the neighbour puts thoughts into his head through the router\nS3: Belief that he is coated in radio signals that must be washed off\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"other\", \"S2\": \"other\", \"S3\": \"other\"}, \"primary_diagnosis\": \"psychotic_disorder\", \"ocd_insight\": null, \"ybocs_items\": null, \"ybocs_total\": null, \"severity_band\": null, \"next_step\": \"not_OCD_refer\", \"rationale\": \"reference answer\"}",
+  "grade": {
+    "task_id": "T04_psychosis_contamination",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "psychotic_disorder",
+      "next_step": "not_ocd_refer",
+      "label_errors": {}
+    }
+  }
+}

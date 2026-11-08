@@ -1,0 +1,116 @@
+{
+  "task_id": "T06_ocd_not_just_right",
+  "trial": 2,
+  "backend": "claude-cli",
+  "model": "haiku",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:10:33+00:00",
+  "latency_s": 11.7,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 639,
+      "cache_read_input_tokens": 2634,
+      "output_tokens": 1392,
+      "output_tokens_details": {
+        "thinking_tokens": 1088
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 639,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 1392,
+          "cache_read_input_tokens": 2634,
+          "cache_creation_input_tokens": 639,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 639
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "model_usage": {
+      "claude-haiku-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 1392,
+        "cacheReadInputTokens": 2634,
+        "cacheCreationInputTokens": 639,
+        "webSearchRequests": 0,
+        "costUSD": 0.00085034,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 1088,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 639,
+        "canonicalModel": "claude-haiku-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "cost_usd": 0.00085034,
+    "duration_ms": 10443
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMs L, 19, first-year university student, self-referred. Since about age 14 she has had a feeling that what she writes is \"not right\" or incomplete. It isn't about mistakes; she knows the notes are accurate. It is a nagging sense of wrongness that stays until things \"feel right\". She says: \"I know it's ridiculous. It makes no sense and I hate it.\" The feeling is around for about two hours a day in total. She tries to ignore it most of the time; sometimes she can shrug it off and sometimes she can't. It is upsetting, but she copes.\n\nShe rewrites pages of notes and rereads sentences again and again until they feel right, about two to two and a half hours a day. She tries not to rewrite most of the time, and about half the time she manages to leave a page as it is. When her flatmate interrupted her in the middle of rewriting, she felt uneasy and irritable for a while. She is now failing two modules because coursework is handed in late or not at all, and she has stopped going out with friends in the evenings to keep up.\n\nShe wishes she could \"just be normal about it\". She is not perfectionistic about other areas of her life: her room is messy and she is relaxed about plans. Mood mildly low because of the course. No substance use. No thoughts of harming herself or anyone else.\n\nSYMPTOMS TO LABEL\nS1: A feeling that her notes are 'not right' or incomplete\nS2: Rewriting pages of notes until they feel right\nS3: Rereading sentences again and again\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\", \"S3\": \"compulsion\"}, \"primary_diagnosis\": \"OCD\", \"ocd_insight\": \"good_or_fair\", \"ybocs_items\": [2, 2, 2, 1, 2, 2, 3, 1, 1, 2], \"ybocs_total\": 18, \"severity_band\": \"moderate\", \"next_step\": \"ERP\", \"rationale\": \"Ms L has a recurrent, unwanted sense that her notes are incomplete (S1), which she tries to ignore and neutralize by rewriting and rereading until they feel right (S2, S3), consuming about 2 to 2.5 hours a day and causing substantial academic and social impairment. She recognizes the belief is irrational ('I know it's ridiculous'), which supports good or fair insight, and her Y-BOCS total of 18 falls in the moderate band.\"}",
+  "grade": {
+    "task_id": "T06_ocd_not_just_right",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp",
+      "label_errors": {},
+      "total": 18,
+      "items": [
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        3,
+        1,
+        1,
+        2
+      ],
+      "item_abs_err": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

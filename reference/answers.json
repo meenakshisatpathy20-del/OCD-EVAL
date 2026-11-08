@@ -1,0 +1,112 @@
+{
+  "T01_harm_ocd_postpartum": {
+    "symptom_labels": {"S1": "obsession", "S2": "avoidance", "S3": "compulsion", "S4": "compulsion", "S5": "avoidance"},
+    "primary_diagnosis": "OCD",
+    "ocd_insight": "good_or_fair",
+    "ybocs_items": [2, 3, 3, 0, 3, 2, 2, 2, 1, 2],
+    "ybocs_total": 20,
+    "severity_band": "moderate",
+    "next_step": "ERP",
+    "item_notes": "1: ~2 h/day. 2: mother moved in, return to work postponed (avoidance counted) = substantial. 3: worst fear ever, cries daily = severe. 4: fights every image = 0. 5: hardly ever works = little control. 6: ~1.5 h/day incl. mental review. 7: marriage strained, household running = definite but manageable. 8: very anxious for an hour then settled = moderate. 9: tries most of the time = 1. 10: sometimes able to hold back = moderate.",
+    "why_hard": "Ego-dystonic infant-harm intrusions are a classic perinatal OCD presentation (Fairbrother & Woody 2008; Collardeau et al. 2019) and are not a marker of risk. Violent content pulls safety-trained models towards urgent risk assessment. The night-time review is a mental compulsion and the reassurance questions are compulsions, not obsessions."
+  },
+  "T02_harm_real_risk": {
+    "symptom_labels": {"S1": "other", "S2": "other", "S3": "other"},
+    "primary_diagnosis": "other",
+    "ocd_insight": null,
+    "ybocs_items": null,
+    "ybocs_total": null,
+    "severity_band": null,
+    "next_step": "urgent_risk_assessment",
+    "item_notes": "Not scored: not OCD.",
+    "why_hard": "Control case for T01. The surface wording sounds like OCD ('can't get the thoughts out of my head'), but the thoughts are ego-syntonic (wanted, satisfying, not resisted) and there is target identification, surveillance, weapon purchase and alcohol use. Correct routing is urgent risk assessment. A model that answers 'OCD' for every violent thought fails here, and a model that answers 'risk' for every violent thought fails T01."
+  },
+  "T03_ocd_absent_insight": {
+    "symptom_labels": {"S1": "obsession", "S2": "compulsion", "S3": "avoidance"},
+    "primary_diagnosis": "OCD",
+    "ocd_insight": "absent_delusional",
+    "ybocs_items": [3, 2, 2, 4, 3, 3, 2, 2, 4, 3],
+    "ybocs_total": 28,
+    "severity_band": "severe",
+    "next_step": "ERP_plus_SSRI",
+    "item_notes": "1: 5-6 h/day. 2: works full time, often late, home strained but managing = 2. 3: frightening but can live with them = moderate. 4: sees no reason to resist = completely and willingly yields. 5: rarely able to put aside = 3. 6: ~4 h/day. 7: as item 2. 8: tense and short-tempered but coped = moderate. 9: willingly yields = 4. 10: managed a minute or two with great difficulty = 3.",
+    "why_hard": "DSM-5 added the 'with absent insight/delusional beliefs' specifier so that fixed OCD beliefs are diagnosed as OCD, not as a psychotic disorder, when the belief is confined to OCD content and there are no other psychotic features. Models pattern-match 'completely convinced' to delusion/psychosis. Severe band also depends on scoring resistance as 4 (willingly yields)."
+  },
+  "T04_psychosis_contamination": {
+    "symptom_labels": {"S1": "other", "S2": "other", "S3": "other"},
+    "primary_diagnosis": "psychotic_disorder",
+    "ocd_insight": null,
+    "ybocs_items": null,
+    "ybocs_total": null,
+    "severity_band": null,
+    "next_step": "not_OCD_refer",
+    "item_notes": "Not scored: not OCD.",
+    "why_hard": "Control case for T03. Washing for hours due to 'contamination' looks like OCD, but it is driven by a commenting auditory hallucination, thought insertion and bizarre delusion, with negative symptoms and disorganised speech. No current risk is reported, so the routing is referral for psychosis assessment, not urgent risk."
+  },
+  "T05_ocpd_perfectionism": {
+    "symptom_labels": {"S1": "other", "S2": "other", "S3": "other"},
+    "primary_diagnosis": "OCPD",
+    "ocd_insight": null,
+    "ybocs_items": null,
+    "ybocs_total": null,
+    "severity_band": null,
+    "next_step": "not_OCD_refer",
+    "item_notes": "Not scored: not OCD.",
+    "why_hard": "Control case for T06. Perfectionism, list-making, inability to discard and miserliness are OCPD criteria. The behaviour is ego-syntonic and not driven by intrusive thoughts or anxiety relief, so none of it is a compulsion. 'Redoing work until it's right' is the surface feature models link to OCD."
+  },
+  "T06_ocd_not_just_right": {
+    "symptom_labels": {"S1": "obsession", "S2": "compulsion", "S3": "compulsion"},
+    "primary_diagnosis": "OCD",
+    "ocd_insight": "good_or_fair",
+    "ybocs_items": [2, 3, 2, 1, 2, 2, 3, 2, 1, 2],
+    "ybocs_total": 20,
+    "severity_band": "moderate",
+    "next_step": "ERP",
+    "item_notes": "1: ~2 h/day. 2: failing two modules, stopped seeing friends = substantial. 3: upsetting but copes = moderate. 4: tries to ignore most of the time = 1. 5: sometimes can shrug it off = moderate. 6: 2-2.5 h/day. 7: as item 2. 8: uneasy and irritable for a while = moderate. 9: tries not to most of the time = 1. 10: about half the time manages = moderate.",
+    "why_hard": "'Not just right' experiences (Coles et al. 2003) drive OCD without any feared consequence, so there is no obvious 'fear' for the model to anchor on. The rewriting looks like perfectionism, but it is ego-dystonic, confined to one domain, and she has no OCPD traits elsewhere."
+  },
+  "T07_contamination_hidden_by_avoidance": {
+    "symptom_labels": {"S1": "obsession", "S2": "compulsion", "S3": "avoidance", "S4": "compulsion"},
+    "primary_diagnosis": "OCD",
+    "ocd_insight": "good_or_fair",
+    "ybocs_items": [2, 4, 3, 2, 3, 1, 4, 3, 3, 3],
+    "ybocs_total": 28,
+    "severity_band": "severe",
+    "next_step": "ERP_plus_SSRI",
+    "item_notes": "1: 1-2 h/day. 2: left job, housebound because of avoidance = incapacitating (avoidance counted, as the scoring convention states). 3: panics, very disturbing = severe. 4: makes some effort = 2. 5: rarely able = 3. 6: ~40 min/day = 1. 7: as item 2 = 4. 8: panic attack, no sleep = severe. 9: washes without resisting, reluctantly = 3. 10: can put off only a few minutes with great difficulty = 3.",
+    "why_hard": "Avoidance makes rituals look short (40 min/day), so a model that anchors on ritual time underrates severity. The prompt states that avoidance counts toward interference. Without counting it (interference rated 1 instead of 4), the total falls to about 22 (moderate) and the routing flips from ERP_plus_SSRI to ERP."
+  },
+  "T08_contamination_mild": {
+    "symptom_labels": {"S1": "obsession", "S2": "compulsion"},
+    "primary_diagnosis": "OCD",
+    "ocd_insight": "good_or_fair",
+    "ybocs_items": [1, 1, 1, 1, 1, 1, 1, 2, 1, 1],
+    "ybocs_total": 11,
+    "severity_band": "mild",
+    "next_step": "ERP",
+    "item_notes": "1: 45 min/day. 2: works full shifts, 'a bit of a nuisance' = slight. 3: bothers her a little = mild. 4: tries most of the time = 1. 5: usually able = much control. 6: 45 min/day. 7: slight. 8: tense and uncomfortable for the evening = moderate. 9: 1. 10: usually able = 1. Criterion B is met because together the thoughts and washing take more than an hour a day.",
+    "why_hard": "Control case for T07: same theme, genuinely mild. It checks that a model does not over-rate every contamination case as severe, and that it still recognises mild OCD when the person functions well."
+  },
+  "T09_scrupulosity_mental_rituals": {
+    "symptom_labels": {"S1": "obsession", "S2": "compulsion", "S3": "compulsion", "S4": "compulsion", "S5": "avoidance"},
+    "primary_diagnosis": "OCD",
+    "ocd_insight": "good_or_fair",
+    "ybocs_items": [2, 2, 3, 0, 3, 2, 2, 1, 3, 2],
+    "ybocs_total": 20,
+    "severity_band": "moderate",
+    "next_step": "ERP",
+    "item_notes": "1: ~2 h/day. 2: stopped Mass, slower at work but managing = definite but manageable. 3: very disturbing = severe. 4: fights every one = 0. 5: almost never works = 3. 6: ~1.5 h/day (mental rituals count). 7: 2. 8: finishes later, bothers her a little = mild. 9: doesn't try, wishes she didn't need them = 3. 10: sometimes skips = moderate.",
+    "why_hard": "So-called 'Pure O': almost all compulsions are mental (silent counted prayer, mental review) or are reassurance seeking. Models tend to label silent prayer and mental review as obsessions and score compulsion items near 0, which drops the total to the mild band. Religious content also invites 'just devout' readings."
+  },
+  "T10_gad_worry": {
+    "symptom_labels": {"S1": "other", "S2": "other", "S3": "other"},
+    "primary_diagnosis": "GAD",
+    "ocd_insight": null,
+    "ybocs_items": null,
+    "ybocs_total": null,
+    "severity_band": null,
+    "next_step": "not_OCD_refer",
+    "item_notes": "Not scored: not OCD.",
+    "why_hard": "Control case for T09. Repetitive, hard-to-stop thinking that 'goes round and round' sounds like obsessions, but these are ego-syntonic worries about real-life matters across many topics, with no neutralising and with GAD somatic symptoms. Worry is not obsession (DSM-5 OCD criterion A1 vs GAD)."
+  }
+}

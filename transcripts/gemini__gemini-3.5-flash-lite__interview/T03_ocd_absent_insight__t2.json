@@ -1,0 +1,77 @@
+{
+  "task_id": "T03_ocd_absent_insight",
+  "trial": 2,
+  "backend": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "format": "interview",
+  "temperature": 1.0,
+  "timestamp_utc": "2026-11-08T09:23:52+00:00",
+  "latency_s": 2.1,
+  "api_error": null,
+  "meta": {
+    "usage": {
+      "promptTokenCount": 1956,
+      "candidatesTokenCount": 239,
+      "totalTokenCount": 2195,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1956
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "finish_reason": "STOP",
+    "model_version": "gemini-3.5-flash-lite"
+  },
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Mrs M (41), bookkeeper. Husband present. C = clinician, P = patient, H = husband.\n\nH: She's been like this for years. I think she's getting paranoid.\nP: I'm not paranoid. I know what I know.\nC: Can you tell me what you know?\nP: The man next door sprays his garden. Pesticide. It drifts. It gets on my hands, on my clothes, and if it gets on the children it will poison them. It isn't a fear. It's a fact.\nC: Is there any chance it isn't true?\nP: No. He [husband] printed things off the internet, the doctor showed me leaflets. They don't understand it.\nC: Does your neighbour mean to harm you?\nP: Him? No, he's a nice old man. He just doesn't know what that stuff does.\nC: How much of the day are you thinking about it?\nP: Five, six hours? I hate it. I wish it would just stop. It pushes in.\nC: Can you put it aside?\nP: Rarely. It's just there.\nC: How upsetting is it?\nP: Frightening. But I can live with it, as long as I can wash.\nC: Tell me about the washing.\nP: Hands, about sixty times a day, a couple of minutes each time. Showers, four a day, twenty minutes. And anything that's been outside gets washed on its own, hot. That's maybe forty minutes a day, all the sorting and loading.\nC: Do you ever try not to wash?\nP: Why would I fight protecting my children?\nH: I asked her once to wait ten minutes. She lasted a minute, two minutes, and she was shaking.\nC: What happened when the water was off?\nP: That afternoon? I was tense. Snappy with everyone. But I coped.\nC: Anything else you do?\nP: The kids don't play on that side of the house. The side facing his garden.\nC: How's work?\nP: Three years ago I was off for six months, it was bad then. Now I'm full time. I'm late most days, but I'm there.\nH: Home's strained. But we're getting by.\nC: Have you ever heard voices or seen things others don't? Felt people were against you, or that your thoughts weren't your own?\nP: No. Nothing like that.\nC: Any thoughts of harming yourself or anyone else?\nP: No. I'm trying to protect them.\n\nSYMPTOMS TO LABEL\nS1: The belief that pesticide traces on her hands and clothes will poison her children\nS2: Washing her hands about 60 times a day and showering four times a day\nS3: Keeping the children away from the side of the house facing the neighbour's garden\n\nReturn the JSON object now.",
+  "response": "{\n  \"symptom_labels\": {\n    \"S1\": \"obsession\",\n    \"S2\": \"compulsion\",\n    \"S3\": \"avoidance\"\n  },\n  \"primary_diagnosis\": \"OCD\",\n  \"ocd_insight\": \"absent_delusional\",\n  \"ybocs_items\": [\n    3,\n    2,\n    3,\n    4,\n    4,\n    2,\n    2,\n    3,\n    4,\n    3\n}\n  \"ybocs_total\": 30,\n  \"severity_band\": \"severe\",\n  \"next_step\": \"ERP_plus_SSRI\",\n  \"rationale\": \"Mrs M presents with classic OCD symptoms, including contamination obsessions regarding pesticide, washing compulsions, and avoidance, accompanied by absent insight/delusional beliefs regarding the absolute truth of her fears. Her YBOCS total score of 30 places her in the severe severity band, indicating that combined treatment with ERP and an SSRI referral is the appropriate next step.\"\n}",
+  "grade": {
+    "task_id": "T03_ocd_absent_insight",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": true,
+      "diagnosis": "ocd",
+      "next_step": "erp_plus_ssri",
+      "label_errors": {},
+      "total": 30,
+      "items": [
+        3,
+        2,
+        3,
+        4,
+        4,
+        2,
+        2,
+        3,
+        4,
+        3
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}

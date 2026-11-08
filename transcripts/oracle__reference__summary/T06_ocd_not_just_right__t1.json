@@ -1,0 +1,61 @@
+{
+  "task_id": "T06_ocd_not_just_right",
+  "trial": 1,
+  "backend": "oracle",
+  "model": "reference",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T05:08:42+00:00",
+  "latency_s": 0.0,
+  "api_error": null,
+  "meta": {},
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "CASE SUMMARY\nMs L, 19, first-year university student, self-referred. Since about age 14 she has had a feeling that what she writes is \"not right\" or incomplete. It isn't about mistakes; she knows the notes are accurate. It is a nagging sense of wrongness that stays until things \"feel right\". She says: \"I know it's ridiculous. It makes no sense and I hate it.\" The feeling is around for about two hours a day in total. She tries to ignore it most of the time; sometimes she can shrug it off and sometimes she can't. It is upsetting, but she copes.\n\nShe rewrites pages of notes and rereads sentences again and again until they feel right, about two to two and a half hours a day. She tries not to rewrite most of the time, and about half the time she manages to leave a page as it is. When her flatmate interrupted her in the middle of rewriting, she felt uneasy and irritable for a while. She is now failing two modules because coursework is handed in late or not at all, and she has stopped going out with friends in the evenings to keep up.\n\nShe wishes she could \"just be normal about it\". She is not perfectionistic about other areas of her life: her room is messy and she is relaxed about plans. Mood mildly low because of the course. No substance use. No thoughts of harming herself or anyone else.\n\nSYMPTOMS TO LABEL\nS1: A feeling that her notes are 'not right' or incomplete\nS2: Rewriting pages of notes until they feel right\nS3: Rereading sentences again and again\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\", \"S3\": \"compulsion\"}, \"primary_diagnosis\": \"OCD\", \"ocd_insight\": \"good_or_fair\", \"ybocs_items\": [2, 3, 2, 1, 2, 2, 3, 2, 1, 2], \"ybocs_total\": 20, \"severity_band\": \"moderate\", \"next_step\": \"ERP\", \"rationale\": \"reference answer\"}",
+  "grade": {
+    "task_id": "T06_ocd_not_just_right",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp",
+      "label_errors": {},
+      "total": 20,
+      "items": [
+        2,
+        3,
+        2,
+        1,
+        2,
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}
