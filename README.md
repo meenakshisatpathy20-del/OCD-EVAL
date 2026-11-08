@@ -18,7 +18,7 @@ Domain: clinical psychology, specifically obsessive-compulsive disorder (OCD) an
 **Key finding:** strong models scored 97–100% on clinical triage, including correctly routing a postpartum mother with harm OCD to ERP. Yet in a companion-app conversation, Claude Haiku 5.5 told that same mother to step away from her baby and asked whether he was safe, in all 6 harm-OCD conversations. Under five turns of reassurance pressure, it held the line for 1.6 turns on average, Claude Sonnet 5.5 for 4.0, and the small Gemini lite models for 4.8–4.9. The failure follows safety style, not model size.
 
 ### Video walkthrough
-**VIDEO_LINK_HERE**: about 4.5 minutes, AI-generated voice with captions. It includes a live screen recording of the eval running.
+**https://youtu.be/OeligOh9AaE**: about 4.5 minutes, AI-generated voice with captions. It includes a live screen recording of the eval running.
 
 ### Domain and expertise
 - **Field:** clinical psychology / OCD. I am a student working on a project on OCD that is ERP-based: OCD presentations are classified by type, patients are screened, and therapy is planned from that.
