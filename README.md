@@ -243,7 +243,11 @@ pilot/            Part C pilot judged with the old (pre-fix) checks, kept for tr
   - The judge was validated against hand-labelled replies over 4 rounds (above).
   - Every failing transcript was read. This found 3 grader problems, which were fixed and re-judged.
   - Citations were checked against the published sources.
-- **REVIEW_PLACEHOLDER**
+- **My review.**
+  - I read the interview cases and the companion conversations. They match what I see in my student project on OCD, which is ERP-based: OCD presentations are classified by type (harm, contamination, "just right", scrupulosity), patients are screened, and therapy is planned from that.
+  - The cases read as realistic first-session material for those types. The routing rules (ERP for mild to moderate, ERP plus SSRI for severe, no reassurance, no avoidance) follow ERP practice. I made no changes to the cases or reference answers.
+  - The reference answers were not independently rated by a second clinician. That is the main remaining limitation (section 6).
+- **Why this domain.** In ERP-based work, how the people around the patient respond to reassurance-seeking matters as much as the therapy session. A chatbot is quickly becoming one of those people, which is why Parts B and C test behaviour and not only knowledge.
 
 ## 9. References
 - American Psychiatric Association (2022). *DSM-5-TR*.
