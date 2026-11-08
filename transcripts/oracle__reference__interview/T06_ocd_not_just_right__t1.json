@@ -1,0 +1,62 @@
+{
+  "task_id": "T06_ocd_not_just_right",
+  "trial": 1,
+  "backend": "oracle",
+  "model": "reference",
+  "format": "interview",
+  "temperature": "CLI default",
+  "timestamp_utc": "2026-11-08T12:00:41+00:00",
+  "latency_s": 0.0,
+  "api_error": null,
+  "meta": {},
+  "system_prompt_file": "prompts/system.md",
+  "user_prompt": "INTERVIEW TRANSCRIPT (rate the past week)\nFirst assessment, Ms L (19), first-year student, self-referred. C = clinician, P = patient.\n\nP: My mum says I'm just a perfectionist, like my dad. Maybe that's all it is.\nC: Tell me what's been happening.\nP: My notes. When I write something it feels... not right. Not wrong, exactly. I know what I wrote is correct. It's like a feeling that it isn't finished. And it doesn't go until it feels right.\nC: What do you make of that feeling?\nP: It's ridiculous. It makes no sense. I hate it.\nC: How much of the day is it around?\nP: On and off. Maybe two hours if you put it together.\nC: What do you do with it?\nP: I try to ignore it, most of the time. Sometimes I can shrug it off. Sometimes I can't. It's upsetting, but I cope.\nC: And when you can't shrug it off?\nP: I rewrite the page. Or I reread the sentence. Again and again, until it clicks. Most evenings that's two hours, two and a half.\nC: Do you try not to?\nP: Yeah, most of the time. About half the time I can leave the page. Half the time I can't.\nC: What happens if someone interrupts you?\nP: My flatmate did last week. I felt uneasy, irritable, for a while. Then it was okay.\nC: How's the course going?\nP: I'm failing two modules. My coursework's late or I don't hand it in. And I've stopped going out in the evenings so I can keep up.\nC: Is it like this in other parts of your life? Your room, plans, other people?\nP: [laughs] My room's a tip. I'm really relaxed about plans. It's just the writing.\nC: Mood? Sleep? Alcohol, drugs?\nP: A bit low, because of the course. Nothing else.\nC: Any thoughts of harming yourself or anyone else?\nP: No.\n\nSYMPTOMS TO LABEL\nS1: A feeling that her notes are 'not right' or incomplete\nS2: Rewriting pages of notes until they feel right\nS3: Rereading sentences again and again\n\nReturn the JSON object now.",
+  "response": "{\"symptom_labels\": {\"S1\": \"obsession\", \"S2\": \"compulsion\", \"S3\": \"compulsion\"}, \"primary_diagnosis\": \"OCD\", \"ocd_insight\": \"good_or_fair\", \"ybocs_items\": [2, 3, 2, 1, 2, 2, 3, 2, 1, 2], \"ybocs_total\": 20, \"severity_band\": \"moderate\", \"next_step\": \"ERP\", \"rationale\": \"reference answer\"}",
+  "grade": {
+    "task_id": "T06_ocd_not_just_right",
+    "components": {
+      "diagnosis": 1.0,
+      "next_step": 1.0,
+      "symptom_labels": 1.0,
+      "insight": 1.0,
+      "severity_band": 1.0,
+      "total_within_3": 1.0
+    },
+    "score": 1.0,
+    "strict_pass": true,
+    "error": null,
+    "detail": {
+      "parsed": true,
+      "salvaged": false,
+      "diagnosis": "ocd",
+      "next_step": "erp",
+      "label_errors": {},
+      "total": 20,
+      "items": [
+        2,
+        3,
+        2,
+        1,
+        2,
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "item_abs_err": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "total_matches_items": true
+    }
+  }
+}
