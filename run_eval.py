@@ -106,6 +106,35 @@ def call_gemini(model, prompt, system_file=SYSTEM_PROMPT_FILE, json_mode=True):
             raise RuntimeError(f"Gemini network error: {e}")
 
 
+def call_openai(model, prompt, system_file=SYSTEM_PROMPT_FILE, json_mode=True):
+    """OpenAI Chat Completions API, key from OPENAI_API_KEY. Temperature is left at the API
+    default because some newer models reject a custom temperature."""
+    key = os.environ.get("OPENAI_API_KEY")
+    if not key:
+        sys.exit("OPENAI_API_KEY is not set (put it in .env, see .env.example)")
+    body = {"model": model, "messages": [
+        {"role": "system", "content": Path(system_file).read_text(encoding="utf-8")},
+        {"role": "user", "content": prompt}]}
+    if json_mode:
+        body["response_format"] = {"type": "json_object"}
+    data = json.dumps(body).encode("utf-8")
+    for attempt in range(6):
+        req = urllib.request.Request("https://api.openai.com/v1/chat/completions", data=data, method="POST",
+                                     headers={"Content-Type": "application/json", "Authorization": f"Bearer {key}"})
+        try:
+            with urllib.request.urlopen(req, timeout=300) as r:
+                resp = json.loads(r.read().decode("utf-8"))
+            ch = resp["choices"][0]
+            return ch["message"].get("content") or "", {"usage": resp.get("usage"), "finish_reason": ch.get("finish_reason"),
+                                                        "model_version": resp.get("model")}
+        except urllib.error.HTTPError as e:
+            msg = e.read().decode("utf-8", "replace")
+            if e.code in (429, 500, 502, 503) and attempt < 5 and "insufficient_quota" not in msg:
+                time.sleep(min(60, 5 * 2 ** attempt))
+                continue
+            raise RuntimeError(f"OpenAI HTTP {e.code}: {msg[:400]}")
+
+
 def call_claude_cli(model, prompt, system_file=SYSTEM_PROMPT_FILE, json_mode=True):
     cmd = ["claude", "-p", "--model", model, "--system-prompt-file", str(system_file),
            "--tools", "", "--no-session-persistence", "--output-format", "json", "--strict-mcp-config"]
@@ -146,6 +175,8 @@ def run_one(backend, model, task, trial, out_dir, force, fmt):
             text, meta = call_gemini(model, prompt)
         elif backend == "claude-cli":
             text, meta = call_claude_cli(model, prompt)
+        elif backend == "openai":
+            text, meta = call_openai(model, prompt)
         else:
             text, meta = call_oracle(model, task["id"])
         error = None
@@ -154,7 +185,7 @@ def run_one(backend, model, task, trial, out_dir, force, fmt):
     g = grade(text, task["id"])
     record = {
         "task_id": task["id"], "trial": trial, "backend": backend, "model": model, "format": fmt,
-        "temperature": TEMPERATURE if backend == "gemini" else "CLI default",
+        "temperature": TEMPERATURE if backend == "gemini" else ("API default" if backend == "openai" else "CLI default"),
         "timestamp_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "latency_s": round(time.time() - t0, 1), "api_error": error, "meta": meta,
         "system_prompt_file": "prompts/system.md", "user_prompt": prompt, "response": text, "grade": g,
@@ -168,7 +199,7 @@ def run_one(backend, model, task, trial, out_dir, force, fmt):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--backend", choices=["gemini", "claude-cli", "oracle"], required=True)
+    ap.add_argument("--backend", choices=["gemini", "claude-cli", "openai", "oracle"], required=True)
     ap.add_argument("--model", required=True)
     ap.add_argument("--trials", type=int, default=3)
     ap.add_argument("--tasks", nargs="*", help="task ids to run (default: all)")

@@ -35,6 +35,8 @@ def call(backend, model, prompt, system_file, json_mode):
         return run_eval.call_gemini(model, prompt, system_file=system_file, json_mode=json_mode)
     if backend == "claude-cli":
         return run_eval.call_claude_cli(model, prompt, system_file=system_file, json_mode=json_mode)
+    if backend == "openai":
+        return run_eval.call_openai(model, prompt, system_file=system_file, json_mode=json_mode)
     raise ValueError(backend)
 
 
@@ -77,12 +79,12 @@ def run_one(args, task, trial, out_dir):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--backend", choices=["gemini", "claude-cli", "reference"], required=True)
+    ap.add_argument("--backend", choices=["gemini", "claude-cli", "openai", "reference"], required=True)
     ap.add_argument("--model", required=True)
     ap.add_argument("--trials", type=int, default=3)
     ap.add_argument("--tasks", nargs="*")
     ap.add_argument("--workers", type=int, default=3)
-    ap.add_argument("--judge-backend", default="claude-cli", choices=["claude-cli", "gemini"])
+    ap.add_argument("--judge-backend", default="claude-cli", choices=["claude-cli", "gemini", "openai"])
     ap.add_argument("--judge-model", default="opus")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--rejudge", action="store_true", help="keep saved replies, re-run only the judge")

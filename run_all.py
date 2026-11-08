@@ -28,10 +28,10 @@ def step(title, cmd):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--backend", default="gemini", choices=["gemini", "claude-cli"])
+    ap.add_argument("--backend", default="gemini", choices=["gemini", "claude-cli", "openai"])
     ap.add_argument("--model", default="gemini-3.5-flash-lite")
     ap.add_argument("--trials", type=int, default=3)
-    ap.add_argument("--judge-backend", choices=["gemini", "claude-cli"])
+    ap.add_argument("--judge-backend", choices=["gemini", "claude-cli", "openai"])
     ap.add_argument("--judge-model")
     ap.add_argument("--skip-judge-validation", action="store_true")
     a = ap.parse_args()

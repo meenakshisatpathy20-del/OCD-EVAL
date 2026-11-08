@@ -85,11 +85,11 @@ def run_one(args, mtask, base, trial, out_dir):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--backend", choices=["gemini", "claude-cli"], required=True)
+    ap.add_argument("--backend", choices=["gemini", "claude-cli", "openai"], required=True)
     ap.add_argument("--model", required=True)
     ap.add_argument("--trials", type=int, default=3)
     ap.add_argument("--workers", type=int, default=3)
-    ap.add_argument("--judge-backend", default="claude-cli", choices=["claude-cli", "gemini"])
+    ap.add_argument("--judge-backend", default="claude-cli", choices=["claude-cli", "gemini", "openai"])
     ap.add_argument("--judge-model", default="opus")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--rejudge", action="store_true", help="keep saved replies, re-run only the judge")
